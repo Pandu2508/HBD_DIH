@@ -2,13 +2,13 @@
 <html lang="id" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy 19th Birthday Dyah Ayu Dhila Adharisandi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy 19th Birthday Dyah Ayu Dhila Adharisandi 🌌</title>
     
-    <!-- Preload Assets & Fonts -->
+    <!-- Preload Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -20,27 +20,44 @@
             theme: {
                 extend: {
                     colors: {
-                        deepspace: '#030007',
-                        nebula: '#120524',
+                        deepspace: '#020005',
+                        nebula: '#0f041e',
                         neonpurple: '#9d4edd',
                         neonviolet: '#c77dff',
                         penguingold: '#ffb81c',
                         sinnergreen: '#2ec4b6',
-                        adlerdark: '#1a1025'
+                        adlerdark: '#160a26',
+                        gothicrose: '#e63946'
                     },
                     fontFamily: {
                         orbitron: ['Orbitron', 'sans-serif'],
                         rajdhani: ['Rajdhani', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'spin-slow': 'spin 25s linear infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+                        'spin-slow': 'spin 20s linear infinite',
+                        'shimmer': 'shimmer 2.5s linear infinite',
+                        'pop-in': 'popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
                     },
                     keyframes: {
                         float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-14px)' },
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-16px) rotate(2deg)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '0.8', filter: 'drop-shadow(0 0 15px rgba(157, 78, 221, 0.6))' },
+                            '50%': { opacity: '1', filter: 'drop-shadow(0 0 35px rgba(255, 184, 28, 0.9))' },
+                        },
+                        shimmer: {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(100%)' }
+                        },
+                        popIn: {
+                            '0%': { transform: 'scale(0.8) translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'scale(1) translateY(0)', opacity: '1' }
                         }
                     }
                 }
@@ -50,43 +67,44 @@
 
     <style>
         body {
-            font-family: 'Rajdhani', sans-serif;
-            background-color: #030007;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #020005;
             color: #f8f9fa;
             overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
         }
         
         .glass-panel {
-            background: rgba(18, 5, 36, 0.78);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
+            background: rgba(15, 4, 30, 0.82);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
             border: 1px solid rgba(199, 125, 255, 0.35);
-            box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.7), inset 0 0 30px rgba(199, 125, 255, 0.08);
+            box-shadow: 0 25px 60px 0 rgba(0, 0, 0, 0.9), inset 0 0 35px rgba(199, 125, 255, 0.1);
         }
 
         .glass-card {
-            background: rgba(26, 16, 37, 0.85);
-            backdrop-filter: blur(16px);
+            background: rgba(22, 10, 38, 0.88);
+            backdrop-filter: blur(20px);
             border: 1px solid rgba(199, 125, 255, 0.25);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .glass-card:hover {
-            border-color: rgba(255, 184, 28, 0.8);
-            box-shadow: 0 0 40px rgba(157, 78, 221, 0.5), 0 0 20px rgba(255, 184, 28, 0.4);
-            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(255, 184, 28, 0.85);
+            box-shadow: 0 0 50px rgba(157, 78, 221, 0.6), 0 0 30px rgba(255, 184, 28, 0.4);
+            transform: translateY(-6px) scale(1.015);
         }
 
         .text-glow {
-            text-shadow: 0 0 25px rgba(199, 125, 255, 0.85), 0 0 50px rgba(157, 78, 221, 0.6);
+            text-shadow: 0 0 30px rgba(199, 125, 255, 0.9), 0 0 60px rgba(157, 78, 221, 0.7);
         }
 
         .gold-glow {
-            text-shadow: 0 0 25px rgba(255, 184, 28, 0.85), 0 0 50px rgba(255, 184, 28, 0.5);
+            text-shadow: 0 0 30px rgba(255, 184, 28, 0.9), 0 0 60px rgba(255, 184, 28, 0.6);
         }
 
         .tennis-glow {
-            text-shadow: 0 0 25px rgba(46, 196, 182, 0.85);
+            text-shadow: 0 0 30px rgba(46, 196, 182, 0.9);
         }
 
         #space-canvas {
@@ -99,59 +117,130 @@
             z-index: 1;
         }
 
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #030007;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #9d4edd;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #c77dff;
-        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #020005; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #9d4edd, #2ec4b6); border-radius: 4px; }
 
+        /* 3D ENVELOPE ANIMATION */
         .envelope-container {
             perspective: 1400px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
         }
         
         .envelope-wrapper {
-            transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.5s ease;
+            position: relative;
+            width: 100%;
+            height: 240px;
+            background: #0f041e;
+            border-radius: 22px;
             transform-style: preserve-3d;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.85), 0 0 50px rgba(157, 78, 221, 0.35);
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.6s ease;
+            cursor: pointer;
         }
 
-        .envelope-wrapper.open {
-            transform: scale(1.06);
+        .envelope-wrapper:hover {
+            transform: translateY(-8px) rotateX(6deg) scale(1.02);
+            box-shadow: 0 35px 90px rgba(0, 0, 0, 0.95), 0 0 60px rgba(255, 184, 28, 0.45);
+        }
+
+        .envelope-inside {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, #3b117a 0%, #080112 100%);
+            border-radius: 22px;
+            border: 1px solid rgba(199, 125, 255, 0.4);
+            z-index: 1;
         }
 
         .letter-preview {
-            transition: transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s ease;
-            transform: translateY(0px) scale(1);
+            position: absolute;
+            bottom: 12px;
+            left: 5%;
+            width: 90%;
+            height: 88%;
+            background: linear-gradient(135deg, #ffffff 0%, #f0e6ff 100%);
+            border-radius: 16px;
+            padding: 1.25rem;
+            z-index: 2;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.45);
+            transform: translateY(0px) scale(0.96);
+            transition: transform 0.85s cubic-bezier(0.34, 1.4, 0.64, 1) 0.35s, box-shadow 0.5s ease;
+            overflow: hidden;
         }
 
         .envelope-wrapper.open .letter-preview {
-            transform: translateY(-85px) scale(1.06);
-            z-index: 20;
-            box-shadow: 0 30px 60px rgba(157, 78, 221, 0.8), 0 0 50px rgba(255, 184, 28, 0.6);
+            transform: translateY(-60%) scale(1.05);
+            z-index: 10;
+            box-shadow: 0 30px 80px rgba(157, 78, 221, 0.8), 0 0 50px rgba(255, 184, 28, 0.7);
+        }
+
+        .envelope-pocket {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .envelope-pocket-shape {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(22, 10, 38, 0.97) 0%, rgba(10, 3, 20, 0.99) 100%);
+            clip-path: polygon(0 0, 50% 48%, 100% 0, 100% 100%, 0 100%);
+            border-radius: 22px;
+            border-bottom: 2px solid rgba(199, 125, 255, 0.45);
+            filter: drop-shadow(0 -4px 12px rgba(0,0,0,0.6));
         }
 
         .envelope-flap {
-            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-            transform-origin: top;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+            transform-origin: top center;
+            transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.1s ease 0.35s;
+        }
+
+        .envelope-flap-shape {
+            width: 100%;
+            height: 52%;
+            background: linear-gradient(180deg, #4c1a96 0%, #1e073c 100%);
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+            border-top-left-radius: 22px;
+            border-top-right-radius: 22px;
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7));
+            border-top: 1px solid rgba(199, 125, 255, 0.6);
         }
 
         .envelope-wrapper.open .envelope-flap {
             transform: rotateX(180deg);
-            z-index: 0;
+            z-index: 1;
         }
 
+        .wax-seal {
+            position: absolute;
+            top: 48%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.27), opacity 0.3s ease;
+        }
+
+        .envelope-wrapper.open .wax-seal {
+            transform: translate(-50%, -50%) scale(0) rotate(140deg);
+            opacity: 0;
+        }
+
+        /* GAME MODAL & CANVAS */
         #game-modal {
             position: fixed;
             inset: 0;
-            background: rgba(3, 0, 7, 0.97);
-            backdrop-filter: blur(35px);
+            background: rgba(2, 0, 5, 0.98);
+            backdrop-filter: blur(40px);
             z-index: 99999;
             display: flex;
             flex-direction: column;
@@ -169,14 +258,16 @@
 
         .game-canvas-container {
             position: relative;
-            width: 420px;
-            height: 420px;
-            border: 2px solid rgba(157, 78, 221, 0.8);
-            border-radius: 28px;
-            background: radial-gradient(circle at center, #1e0c3f 0%, #030007 100%);
-            box-shadow: 0 0 90px rgba(157, 78, 221, 0.6), inset 0 0 45px rgba(199, 125, 255, 0.2);
+            width: 100%;
+            max-width: 440px;
+            aspect-ratio: 1 / 1;
+            border: 2px solid rgba(157, 78, 221, 0.85);
+            border-radius: 24px;
+            background: radial-gradient(circle at center, #230c4a 0%, #020005 100%);
+            box-shadow: 0 0 120px rgba(157, 78, 221, 0.75), inset 0 0 60px rgba(199, 125, 255, 0.3);
             overflow: hidden;
             touch-action: none;
+            margin: 0 auto;
         }
 
         #constellationCanvas {
@@ -190,12 +281,13 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            max-width: 420px;
+            max-width: 440px;
             margin-bottom: 14px;
             font-family: 'Orbitron', sans-serif;
-            font-size: 0.9em;
+            font-size: 0.85em;
             color: #c77dff;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+            padding: 0 10px;
         }
 
         .game-popup {
@@ -203,110 +295,157 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) scale(0.9);
-            background: rgba(18, 5, 36, 0.96);
+            background: rgba(15, 4, 30, 0.99);
             border: 2px solid #ffb81c;
             padding: 24px;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 0 60px rgba(255, 184, 28, 0.6);
+            width: 88%;
+            box-shadow: 0 0 80px rgba(255, 184, 28, 0.8);
             z-index: 50;
             opacity: 0;
             pointer-events: none;
             transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        
         .game-popup.active {
             opacity: 1;
             pointer-events: auto;
             transform: translate(-50%, -50%) scale(1);
         }
 
-        /* PHOTOBOOTH STYLING ADAPTED TO SPACE THEME */
-        .video-mirror {
-            transform: scaleX(-1);
-            transition: filter 0.3s ease;
+        .video-mirror { transform: scaleX(-1); }
+        .filter-bw { filter: grayscale(100%) contrast(130%); }
+        .filter-warm { filter: sepia(50%) contrast(115%) brightness(105%) hue-rotate(-12deg); }
+        .filter-cyber { filter: hue-rotate(180deg) saturate(180%) contrast(120%); }
+
+        /* Camera Flash Overlay */
+        #cameraFlash {
+            position: absolute;
+            inset: 0;
+            background: white;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 30;
+            transition: opacity 0.15s ease-out;
         }
-        .filter-bw {
-            filter: grayscale(100%) contrast(115%);
+
+        /* Dynamic Equalizer Bar */
+        .eq-bar {
+            width: 3px;
+            background-color: #ffb81c;
+            animation: eqBounce 1.2s ease-in-out infinite alternate;
         }
-        .filter-warm {
-            filter: sepia(35%) contrast(105%) brightness(105%) hue-rotate(-10deg);
+        @keyframes eqBounce {
+            0% { height: 4px; }
+            100% { height: 20px; }
+        }
+
+        /* Pop-up Modal untuk Hasil Photostrip */
+        #stripModal {
+            position: fixed;
+            inset: 0;
+            background: rgba(2, 0, 5, 0.94);
+            backdrop-filter: blur(30px);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        #stripModal.active {
+            opacity: 1;
+            pointer-events: auto;
         }
     </style>
 </head>
 <body class="relative min-h-screen selection:bg-neonpurple selection:text-white">
 
+    <!-- Interactive Canvas Background -->
     <canvas id="space-canvas"></canvas>
 
     <!-- CINEMATIC LOADER -->
     <div id="loader" class="fixed inset-0 z-50 bg-deepspace flex flex-col items-center justify-center transition-opacity duration-1000">
         <div class="relative flex items-center justify-center mb-8">
-            <div class="absolute w-36 h-36 rounded-full border-2 border-neonpurple/30 border-t-penguingold border-r-sinnergreen animate-spin-slow"></div>
-            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-neonpurple to-neonviolet flex items-center justify-center shadow-2xl shadow-neonpurple/70 animate-pulse">
-                <i class="fa-solid fa-rocket text-white text-2xl"></i>
+            <div class="absolute w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-neonpurple/30 border-t-penguingold border-r-sinnergreen animate-spin-slow"></div>
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-tr from-neonpurple via-neonviolet to-penguingold flex items-center justify-center shadow-2xl shadow-neonpurple/80 animate-pulse">
+                <i class="fa-solid fa-crown text-white text-xl md:text-2xl"></i>
             </div>
         </div>
         <h1 class="font-orbitron font-black text-2xl md:text-4xl tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-neonviolet via-penguingold to-sinnergreen text-center px-4 mb-2 text-glow">
             DYAH AYU DHILA
         </h1>
-        <p class="font-rajdhani text-xs md:text-sm tracking-[0.4em] text-neonviolet/80 uppercase">
-            Calibrating Quantum Star Matrix...
+        <p class="font-rajdhani text-xs md:text-sm tracking-[0.3em] md:tracking-[0.4em] text-neonviolet/80 uppercase">
+            Initiating 1000x Enhanced Cosmic Birthday Matrix...
         </p>
     </div>
 
     <!-- ENVELOPE OVERLAY -->
     <div id="envelope-overlay" class="fixed inset-0 z-40 bg-deepspace/95 backdrop-blur-2xl flex flex-col items-center justify-center p-4 transition-opacity duration-1000 hidden">
-        <div class="text-center mb-8" data-aos="fade-down" data-aos-duration="1000">
-            <span class="inline-block px-4 py-1.5 rounded-full bg-neonpurple/20 border border-neonpurple/50 text-neonviolet font-orbitron text-xs tracking-widest mb-3 shadow-lg shadow-neonpurple/20">
+        <div class="text-center mb-6 md:mb-10" data-aos="fade-down" data-aos-duration="1000">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-neonpurple/20 border border-neonpurple/50 text-neonviolet font-orbitron text-[10px] md:text-xs tracking-widest mb-3 shadow-lg shadow-neonpurple/20">
                 SECURE TRANSMISSION #19 &bull; PRIORITY VIP
             </span>
-            <h2 class="font-orbitron font-bold text-xl md:text-3xl text-penguingold gold-glow">
+            <h2 class="font-orbitron font-bold text-lg md:text-3xl text-penguingold gold-glow px-4">
                 Incoming Stellar Package for Commander Dhila
             </h2>
         </div>
 
-        <div class="envelope-container relative cursor-pointer group py-12" id="envelopeBtn">
-            <div class="envelope-wrapper relative w-80 h-52 md:w-96 md:h-60 bg-gradient-to-br from-adlerdark to-nebula border-2 border-neonpurple/60 rounded-xl shadow-2xl shadow-neonpurple/40 flex items-center justify-center">
-                <div class="envelope-flap absolute top-0 left-0 w-0 h-0 border-x-[160px] md:border-x-[192px] border-x-transparent border-t-[110px] md:border-t-[130px] border-t-purple-950 z-30 drop-shadow-md"></div>
-                
-                <div class="letter-preview absolute w-[85%] h-[80%] bg-[#f4f0ff] text-slate-900 rounded-lg p-6 flex flex-col justify-between z-10 shadow-inner">
+        <div class="envelope-container relative cursor-pointer group py-4 md:py-8 flex justify-center" id="envelopeBtn">
+            <div class="envelope-wrapper">
+                <div class="envelope-inside"></div>
+
+                <div class="letter-preview flex flex-col justify-between">
                     <div>
                         <div class="flex justify-between items-center mb-2">
-                            <span class="font-orbitron text-xs font-bold text-neonpurple tracking-wider">TOP SECRET &bull; 19</span>
-                            <i class="fa-solid fa-star text-penguingold text-xs"></i>
+                            <span class="font-orbitron text-[9px] md:text-[11px] font-bold text-neonpurple tracking-wider">TOP SECRET &bull; 19</span>
+                            <i class="fa-solid fa-star text-penguingold text-xs animate-pulse"></i>
                         </div>
-                        <h3 class="font-orbitron font-black text-lg text-slate-900 tracking-wide">For Dhila 🤍</h3>
-                        <p class="font-rajdhani text-xs text-slate-600 mt-1 line-clamp-2">
+                        <h3 class="font-orbitron font-black text-sm md:text-lg text-slate-900 tracking-wide">For Dhila 🤍</h3>
+                        <p class="font-sans text-[11px] md:text-xs text-slate-700 mt-1 line-clamp-2 leading-snug">
                             Happy 19th Birthday! Tap to decrypt your ultimate stellar coordinate package...
                         </p>
                     </div>
                     <div class="text-right">
-                        <span class="font-orbitron text-[10px] text-neonpurple font-semibold uppercase tracking-widest bg-neonpurple/10 px-2 py-1 rounded">
-                            Decrypt Now &rarr;
+                        <span class="font-orbitron text-[8px] md:text-[10px] text-neonpurple font-semibold uppercase tracking-widest bg-neonpurple/15 px-2 py-1 rounded">
+                            Decrypting... &rarr;
                         </span>
                     </div>
                 </div>
 
-                <div class="absolute z-30 w-14 h-14 rounded-full bg-gradient-to-tr from-penguingold to-amber-600 flex items-center justify-center shadow-xl border-2 border-amber-200 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-crown text-deepspace text-base"></i>
+                <div class="envelope-pocket">
+                    <div class="envelope-pocket-shape"></div>
+                </div>
+
+                <div class="envelope-flap">
+                    <div class="envelope-flap-shape"></div>
+                </div>
+
+                <div class="wax-seal">
+                    <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-tr from-penguingold via-amber-500 to-amber-600 flex items-center justify-center shadow-2xl border-2 border-amber-200 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-crown text-deepspace text-base md:text-lg"></i>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <p class="mt-8 font-orbitron text-xs md:text-sm tracking-[0.3em] text-neonviolet animate-pulse text-glow">
+        <p class="mt-8 md:mt-12 font-orbitron text-[10px] md:text-sm tracking-[0.2em] md:tracking-[0.3em] text-neonviolet animate-pulse text-glow text-center px-4">
             [ TAP THE SECURE ENVELOPE TO LAUNCH EXPERIENCE ]
         </p>
     </div>
 
-    <!-- ULTRA CONSTELLATION MINI GAME MODAL -->
+    <!-- CONSTELLATION MINI GAME MODAL -->
     <div id="game-modal">
-        <div class="text-center mb-3 px-4 relative z-10">
-            <span class="px-4 py-1 rounded-full bg-neonpurple/20 border border-neonpurple/50 text-neonviolet font-orbitron text-xs tracking-widest">
-                INTERSTELLAR PROTOCOL v3.0 &bull; CONSTELLATION MATRIX
+        <div class="text-center mb-3 px-4 relative z-10 w-full max-w-md">
+            <span class="inline-block px-3 py-1 rounded-full bg-neonpurple/20 border border-neonpurple/50 text-neonviolet font-orbitron text-[10px] tracking-widest">
+                INTERSTELLAR PROTOCOL v3.0
             </span>
-            <h3 id="gameLevelTitle" class="font-orbitron font-bold text-xl md:text-2xl text-penguingold gold-glow mt-2">
+            <h3 id="gameLevelTitle" class="font-orbitron font-bold text-lg md:text-2xl text-penguingold gold-glow mt-2 leading-snug">
                 Level 1: Pittsburgh Penguins Emblem 🐧
             </h3>
-            <p id="gameInstruction" class="font-rajdhani text-slate-300 text-sm tracking-wider mt-1">
+            <p id="gameInstruction" class="font-rajdhani text-slate-300 text-xs md:text-sm tracking-wider mt-1 px-2">
                 Ikuti urutan titik bintang yang menyala untuk menghubungkan rasi!
             </p>
         </div>
@@ -316,157 +455,182 @@
             <span id="gameScore"><i class="fa-solid fa-star mr-1 text-penguingold"></i> SCORE: 0</span>
         </div>
 
-        <div class="game-canvas-container relative">
-            <canvas id="constellationCanvas" width="420" height="420"></canvas>
-            
-            <div id="gamePopup" class="game-popup">
-                <div class="w-12 h-12 rounded-full bg-penguingold/20 border border-penguingold flex items-center justify-center mx-auto mb-3 text-penguingold text-xl">
-                    <i class="fa-solid fa-trophy"></i>
+        <div class="w-full px-4 md:px-0 flex justify-center">
+            <div class="game-canvas-container relative">
+                <canvas id="constellationCanvas" width="440" height="440"></canvas>
+                
+                <div id="gamePopup" class="game-popup">
+                    <div class="w-12 h-12 rounded-full bg-penguingold/20 border border-penguingold flex items-center justify-center mx-auto mb-3 text-penguingold text-xl shadow-lg">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h4 id="popupTitle" class="font-orbitron font-bold text-base md:text-lg text-penguingold mb-1">Level Cleared!</h4>
+                    <p id="popupDesc" class="font-sans text-slate-200 text-xs md:text-sm mb-5 leading-relaxed">Rasi bintang berhasil dibentuk dengan sempurna!</p>
+                    <button id="nextLevelBtn" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-neonpurple via-neonviolet to-penguingold text-white font-orbitron text-[10px] md:text-xs tracking-wider shadow-lg hover:scale-105 transition w-full font-bold">
+                        Lanjut &rarr;
+                    </button>
                 </div>
-                <h4 id="popupTitle" class="font-orbitron font-bold text-lg text-penguingold mb-1">Level Cleared!</h4>
-                <p id="popupDesc" class="font-rajdhani text-slate-200 text-sm mb-4">Rasi bintang berhasil dibentuk dengan sempurna!</p>
-                <button id="nextLevelBtn" class="px-6 py-2 rounded-xl bg-gradient-to-r from-neonpurple to-neonviolet text-white font-orbitron text-xs tracking-wider shadow-lg hover:scale-105 transition">
-                    Lanjut ke Level Berikutnya &rarr;
-                </button>
             </div>
         </div>
 
-        <div class="mt-5 flex flex-wrap justify-center gap-3 relative z-10">
-            <button id="hintGameBtn" class="px-4 py-2 rounded-xl bg-sinnergreen/20 border border-sinnergreen/50 text-sinnergreen font-orbitron text-xs tracking-wider hover:bg-sinnergreen/40 transition flex items-center gap-2">
+        <div class="mt-4 md:mt-5 flex flex-wrap justify-center gap-2 md:gap-3 relative z-10 px-4">
+            <button id="hintGameBtn" class="px-4 py-2 rounded-xl bg-sinnergreen/20 border border-sinnergreen/50 text-sinnergreen font-orbitron text-[10px] md:text-xs tracking-wider hover:bg-sinnergreen/40 transition flex items-center gap-2">
                 <i class="fa-solid fa-lightbulb"></i> Petunjuk
             </button>
-            <button id="resetGameBtn" class="px-4 py-2 rounded-xl bg-neonpurple/20 border border-neonpurple/50 text-neonviolet font-orbitron text-xs tracking-wider hover:bg-neonpurple/40 transition">
+            <button id="resetGameBtn" class="px-4 py-2 rounded-xl bg-neonpurple/20 border border-neonpurple/50 text-neonviolet font-orbitron text-[10px] md:text-xs tracking-wider hover:bg-neonpurple/40 transition">
                 Ulangi
             </button>
-            <button id="closeGameBtn" class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 font-orbitron text-xs tracking-wider hover:bg-slate-800 transition">
+            <button id="closeGameBtn" class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 font-orbitron text-[10px] md:text-xs tracking-wider hover:bg-slate-800 transition">
                 Tutup
             </button>
         </div>
     </div>
 
-    <!-- AUDIO PLAYER -->
+    <!-- FULLSCREEN POP-OUT MODAL UNTUK PHOTOSTRIP -->
+    <div id="stripModal" onclick="closeStripModal()">
+        <div class="relative max-w-lg w-full p-4 flex flex-col items-center animate-pop-in" onclick="event.stopPropagation()">
+            <button onclick="closeStripModal()" class="absolute -top-12 right-2 md:right-0 w-10 h-10 rounded-full bg-deepspace border border-neonviolet/50 text-white flex items-center justify-center hover:bg-neonpurple transition shadow-lg">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="glass-panel p-3 rounded-3xl border border-neonviolet/60 shadow-2xl max-h-[82vh] overflow-y-auto">
+                <img id="modalStripImg" src="" class="w-full h-auto rounded-2xl shadow-2xl" alt="Photostrip Popout">
+            </div>
+            <p class="font-orbitron text-xs text-penguingold mt-4 tracking-widest text-center">
+                ✨ Tap di luar gambar untuk menutup atau unduh di bawah ✨
+            </p>
+        </div>
+    </div>
+
+    <!-- AUDIO PLAYER & WIDGET -->
     <audio id="bgMusic" loop preload="auto">
-        <source src="The Walls.mp3" type="audio/mpeg">
+        <source src="WMUWSE.mp3" type="audio/mpeg">
     </audio>
 
-    <button id="musicBtn" aria-label="Toggle Audio" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full glass-panel border border-neonpurple/50 text-neonviolet flex items-center justify-center shadow-xl shadow-neonpurple/40 hover:scale-110 transition-all duration-300 hidden">
-        <i class="fa-solid fa-play text-lg" id="musicIcon"></i>
+    <button id="musicBtn" aria-label="Toggle Audio" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 px-4 py-3 rounded-full glass-panel border border-neonpurple/50 text-neonviolet flex items-center gap-3 shadow-2xl shadow-neonpurple/50 hover:scale-105 transition-all duration-300 hidden">
+        <i class="fa-solid fa-play text-sm md:text-base text-penguingold" id="musicIcon"></i>
+        <div class="flex items-end gap-0.5 h-4" id="eqContainer">
+            <div class="eq-bar" style="animation-delay: 0.1s"></div>
+            <div class="eq-bar" style="animation-delay: 0.3s"></div>
+            <div class="eq-bar" style="animation-delay: 0.2s"></div>
+            <div class="eq-bar" style="animation-delay: 0.4s"></div>
+        </div>
     </button>
 
     <!-- MAIN APP CONTENT -->
     <div id="main-content" class="opacity-0 transition-opacity duration-1000 relative z-10">
         
+        <!-- HEADER / HERO -->
         <header class="relative min-h-[95vh] flex flex-col items-center justify-center px-4 overflow-hidden pt-20 pb-16">
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-nebula/40 to-deepspace z-0"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-nebula/50 to-deepspace z-0"></div>
             
-            <div class="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
-                <div class="flex items-center justify-center gap-6 md:gap-12 mb-8" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center w-full">
+                <div class="flex items-center justify-center gap-4 md:gap-12 mb-6 md:mb-8" data-aos="zoom-in" data-aos-duration="1000">
                     <div class="relative group">
-                        <div class="absolute -inset-1.5 rounded-full bg-gradient-to-r from-neonpurple to-neonviolet blur opacity-75 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
-                        <img src="Marceline.png" alt="Marceline" class="relative w-20 h-20 md:w-28 md:h-28 object-contain rounded-full glass-panel p-2.5 animate-float" loading="lazy">
+                        <div class="absolute -inset-2 rounded-full bg-gradient-to-r from-neonpurple to-neonviolet blur-md opacity-75 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
+                        <a href="ABDDHILAEGG.mp4"><img src="Flins.png" alt="Flins" class="relative w-20 h-20 md:w-32 md:h-32 object-contain rounded-full glass-panel p-2 animate-float" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=300&q=80'"></a>
                     </div>
                     
-                    <div class="w-14 h-14 rounded-full glass-panel border border-penguingold/60 flex items-center justify-center text-penguingold shadow-xl shadow-penguingold/20 animate-spin-slow">
-                        <i class="fa-solid fa-atom text-2xl"></i>
+                    <div class="w-10 h-10 md:w-16 md:h-16 rounded-full glass-panel border border-penguingold/60 flex items-center justify-center text-penguingold shadow-2xl shadow-penguingold/30 animate-spin-slow">
+                        <i class="fa-solid fa-atom text-xl md:text-3xl"></i>
                     </div>
 
                     <div class="relative group">
-                        <div class="absolute -inset-1.5 rounded-full bg-gradient-to-r from-penguingold to-amber-500 blur opacity-75 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
-                        <img src="eggward.png" alt="Eggward" class="relative w-20 h-20 md:w-28 md:h-28 object-contain rounded-full glass-panel p-2.5 animate-float" style="animation-delay: 2s;" loading="lazy">
+                        <div class="absolute -inset-2 rounded-full bg-gradient-to-r from-penguingold to-amber-500 blur-md opacity-75 group-hover:opacity-100 transition duration-300 animate-pulse"></div>
+                        <img src="Sunday.png" alt="Sunday" class="relative w-20 h-20 md:w-32 md:h-32 object-contain rounded-full glass-panel p-2 animate-float-delayed" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=300&q=80'">
                     </div>
                 </div>
 
-                <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-neonpurple/20 border border-neonpurple/50 text-neonviolet font-orbitron text-xs md:text-sm tracking-widest mb-6 shadow-xl shadow-neonpurple/20" data-aos="fade-down" data-aos-delay="200">
-                    <i class="fa-solid fa-cake-candles text-penguingold"></i> SPECIAL BIRTHDAY TRANSMISSION &bull; SEPTEMBER 9TH
+                <span class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-neonpurple/20 border border-neonpurple/50 text-neonviolet font-orbitron text-[10px] md:text-xs tracking-widest mb-4 md:mb-6 shadow-xl shadow-neonpurple/20" data-aos="fade-down" data-aos-delay="200">
+                    <i class="fa-solid fa-cake-candles text-penguingold"></i> SPECIAL BIRTHDAY TRANSMISSION
                 </span>
 
-                <h1 class="font-orbitron font-black text-3xl md:text-6xl lg:text-7xl tracking-wider text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="400">
-                    Selamat Ulang Tahun ke-19 <br>
+                <h1 class="font-orbitron font-black text-3xl md:text-6xl lg:text-7xl tracking-wider text-white mb-4 md:mb-6 leading-tight px-2" data-aos="fade-up" data-aos-delay="400">
+                    Selamat Ulang Tahun <br class="hidden md:block"> ke-19 <br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonviolet via-penguingold to-sinnergreen text-glow">
-                        Dyah Ayu Dhila Adharisandi!
+                        Dyah Ayu Dhila A.
                     </span>
                 </h1>
 
-                <p class="font-rajdhani text-xl md:text-2xl text-slate-300 tracking-[0.2em] uppercase max-w-2xl mb-10" data-aos="fade-up" data-aos-delay="600">
+                <p class="font-rajdhani text-base md:text-2xl text-slate-300 tracking-[0.1em] md:tracking-[0.2em] uppercase max-w-2xl mb-8 md:mb-10 px-4" data-aos="fade-up" data-aos-delay="600">
                     Official entry into the <span class="text-penguingold font-bold">19th year</span> orbit &bull; Mission Success 🚀
                 </p>
 
-                <div class="mb-8 flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="700">
-                    <button id="openGameBtn" class="px-8 py-4 rounded-2xl glass-panel border border-neonpurple/60 text-penguingold font-orbitron text-sm md:text-base tracking-widest hover:border-sinnergreen hover:text-sinnergreen transition-all duration-300 shadow-2xl shadow-neonpurple/40 hover:scale-105 flex items-center gap-3">
-                        <i class="fa-solid fa-wand-magic-sparkles text-penguingold animate-spin"></i> Play Stellar Constellation Protocol (Mini-Game)
+                <div class="mb-10 flex flex-col sm:flex-row justify-center gap-4 w-full px-4 sm:px-0" data-aos="fade-up" data-aos-delay="700">
+                    <button id="openGameBtn" class="w-full sm:w-auto px-7 py-3.5 md:px-8 md:py-4 rounded-2xl glass-panel border border-neonpurple/60 text-penguingold font-orbitron text-xs md:text-sm tracking-widest hover:border-sinnergreen hover:text-sinnergreen transition-all duration-300 shadow-xl shadow-neonpurple/40 hover:scale-105 flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-wand-magic-sparkles text-penguingold animate-spin"></i> Play Constellation Game
                     </button>
-                    <a href="#photobooth-section" class="px-8 py-4 rounded-2xl glass-panel border border-sinnergreen/60 text-sinnergreen font-orbitron text-sm md:text-base tracking-widest hover:border-penguingold hover:text-penguingold transition-all duration-300 shadow-2xl shadow-sinnergreen/30 hover:scale-105 flex items-center gap-3">
+                    <a href="#photobooth-section" class="w-full sm:w-auto px-7 py-3.5 md:px-8 md:py-4 rounded-2xl glass-panel border border-sinnergreen/60 text-sinnergreen font-orbitron text-xs md:text-sm tracking-widest hover:border-penguingold hover:text-penguingold transition-all duration-300 shadow-xl shadow-sinnergreen/30 hover:scale-105 flex items-center justify-center gap-3">
                         <i class="fa-solid fa-camera text-sinnergreen"></i> Open Photobooth 📸
                     </a>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-3 max-w-3xl" data-aos="fade-up" data-aos-delay="800">
-                    <div class="glass-panel px-4 py-2 rounded-xl flex items-center gap-2 border border-neonpurple/40 text-neonviolet text-sm font-orbitron tracking-wider shadow-md">
+                <div class="flex flex-wrap justify-center gap-2 md:gap-3 max-w-3xl px-2" data-aos="fade-up" data-aos-delay="800">
+                    <div class="glass-panel px-4 py-2 rounded-xl flex items-center gap-2 border border-neonpurple/40 text-neonviolet text-[10px] md:text-xs font-orbitron tracking-wider shadow-md">
                         <i class="fa-solid fa-galaxy text-neonpurple"></i> Interstellar Cosmos
                     </div>
-                    <div class="glass-panel px-4 py-2 rounded-xl flex items-center gap-2 border border-sinnergreen/40 text-sinnergreen text-sm font-orbitron tracking-wider shadow-md">
+                    <div class="glass-panel px-4 py-2 rounded-xl flex items-center gap-2 border border-sinnergreen/40 text-sinnergreen text-[10px] md:text-xs font-orbitron tracking-wider shadow-md">
                         <i class="fa-solid fa-table-tennis-paddle-ball text-sinnergreen"></i> Jannik Sinner Vibe
                     </div>
-                    <div class="glass-panel px-4 py-2 rounded-xl flex items-center gap-2 border border-penguingold/40 text-penguingold text-sm font-orbitron tracking-wider shadow-md">
+                    <div class="glass-panel px-4 py-2 rounded-xl flex items-center gap-2 border border-penguingold/40 text-penguingold text-[10px] md:text-xs font-orbitron tracking-wider shadow-md">
                         <i class="fa-solid fa-shield-halved text-penguingold"></i> Pittsburgh Penguins
-                    </div>
-                    <div class="glass-panel px-4 py-2 rounded-xl flex items-center gap-2 border border-purple-500/40 text-purple-300 text-sm font-orbitron tracking-wider shadow-md">
-                        <i class="fa-solid fa-crosshairs text-purple-400"></i> Russell Adler (COD)
                     </div>
                 </div>
             </div>
         </header>
 
-        <main class="max-w-5xl mx-auto px-4 py-12 space-y-16">
+        <!-- MAIN BODY CONTENT -->
+        <main class="max-w-5xl mx-auto px-4 py-8 md:py-12 space-y-12 md:space-y-16">
 
-            <section class="relative rounded-3xl overflow-hidden glass-panel border border-neonpurple/35 shadow-2xl group" data-aos="fade-up" data-aos-duration="1000">
-                <div class="absolute inset-0 bg-gradient-to-t from-deepspace via-deepspace/50 to-transparent z-10"></div>
-                <img src="ryona1.jpeg" alt="Dhila Hero" class="w-full h-[380px] md:h-[500px] object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-90" loading="lazy">
+            <!-- HERO PHOTO CARD -->
+            <section class="relative rounded-3xl overflow-hidden glass-panel border border-neonpurple/40 shadow-2xl group" data-aos="fade-up" data-aos-duration="1000">
+                <div class="absolute inset-0 bg-gradient-to-t from-deepspace via-deepspace/40 to-transparent z-10"></div>
+                <img src="fotobareng1.jpeg".jpeg" alt="Dhila Hero" class="w-full h-[320px] md:h-[520px] object-cover object-center group-hover:scale-105 transition-transform duration-700 filter brightness-90" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1080&q=80'">
                 
-                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-10 z-20 text-center">
-                    <h2 class="font-orbitron font-bold text-2xl md:text-4xl text-neonviolet text-glow mb-2">
+                <div class="absolute bottom-0 left-0 right-0 p-5 md:p-10 z-20 text-center">
+                    <h2 class="font-orbitron font-bold text-xl md:text-4xl text-neonviolet text-glow mb-1 md:mb-2">
                         &quot;Sekarang kamu sudah umur 19 tahun&quot;
                     </h2>
-                    <p class="font-rajdhani text-slate-300 tracking-widest text-sm md:text-base uppercase">
+                    <p class="font-rajdhani text-slate-300 tracking-widest text-xs md:text-base uppercase">
                         Level 19 Unlocked &bull; Ready for New Cosmic Adventures
                     </p>
                 </div>
             </section>
 
-            <section class="glass-panel rounded-3xl p-8 md:p-12 relative overflow-hidden border border-neonpurple/40 shadow-2xl" data-aos="fade-up">
-                <div class="absolute top-0 right-0 w-72 h-72 bg-neonpurple/15 rounded-full blur-3xl pointer-events-none"></div>
+            <!-- BIRTHDAY LETTER SECTION -->
+            <section class="glass-panel rounded-3xl p-6 md:p-12 relative overflow-hidden border border-neonpurple/40 shadow-2xl" data-aos="fade-up">
+                <div class="absolute top-0 right-0 w-48 h-48 md:w-72 md:h-72 bg-neonpurple/15 rounded-full blur-3xl pointer-events-none"></div>
                 
-                <div class="flex items-center gap-4 mb-8 border-b border-neonpurple/30 pb-4">
-                    <div class="w-12 h-12 rounded-2xl bg-neonpurple/20 border border-neonpurple/50 flex items-center justify-center text-neonviolet shadow-lg">
-                        <i class="fa-solid fa-envelope-open-text text-xl"></i>
+                <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8 border-b border-neonpurple/30 pb-4">
+                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-neonpurple/20 border border-neonpurple/50 flex items-center justify-center text-neonviolet shadow-lg shrink-0">
+                        <i class="fa-solid fa-envelope-open-text text-base md:text-xl"></i>
                     </div>
                     <div>
-                        <h3 class="font-orbitron font-bold text-xl md:text-2xl text-penguingold gold-glow">
-                            ABD Dyah Ayu Dhila Adharisandi
+                        <h3 class="font-orbitron font-bold text-base md:text-2xl text-penguingold gold-glow">
+                            ABD Dyah Ayu Dhila A.
                         </h3>
-                        <p class="font-rajdhani text-xs text-neonviolet tracking-widest uppercase">Personal Captain's Log &bull; Entry #19</p>
+                        <p class="font-rajdhani text-[10px] md:text-xs text-neonviolet tracking-widest uppercase">Personal Captain's Log &bull; Entry #19</p>
                     </div>
                 </div>
 
-                <div class="space-y-6 font-rajdhani text-lg md:text-xl text-slate-200 leading-relaxed">
-                    <p class="text-white font-semibold text-2xl">Happy 19th Birthday, Dhila 🤍</p>
-                    <p>Gak kerasa ya… kita udah kenal selama ini. Kurang lebih 3 tahunan lah, dan jujur aja, banyak banget momen yang aku inget dari semua itu.</p>
-                    <p>Mulai dari hal-hal kecil sampai yang random banget… tapi justru itu yang bikin semuanya berasa berarti.</p>
-                    <p>Di hari spesial kamu ini, aku cuma mau bilang—semoga kamu selalu bahagia, semua yang kamu usahakan pelan-pelan tercapai, dan hidup kamu ke depan jadi lebih baik dari yang kamu bayangin.</p>
-                    <p>Aku juga berharap… kita masih bisa tetap deket, tetap temenan baik, walaupun nanti keadaan berubah atau kita jalan ke arah masing-masing.</p>
-                    <p>Thanks ya, udah jadi bagian dari hidup aku selama ini. Aku beneran menghargai itu.</p>
-                    <p>Ngomong-ngomong soal hadiah… jujur aku sempet bingung 😭 tapi yaudah karena aku tau kamu suka yang gothic-gothic, jadi aku pilihin itu. Semoga kamu suka.</p>
-                    <p class="text-penguingold font-semibold">Oh iya, bebeknya… inget sesuatu gak? 👀</p>
-                    <p>Balasan kemarin juga lucu sih—kalung taring wkwkwk.</p>
-                    <p>Pokoknya, semoga kita masih bisa ketawa bareng lagi ke depannya, gak cuma sekarang tapi lama banget.</p>
+                <div class="space-y-4 md:space-y-6 font-sans text-sm md:text-base text-slate-200 leading-relaxed text-justify md:text-left">
+                    <p class="text-white font-bold text-lg md:text-2xl font-orbitron">Happy 19th Birthday, Dhila 🤍</p>
+                    <p>Dih sekarang kamu sudah 19 tahun, tahun depan kamu berkepala 2. We're gonna go to twenties next year oh noooooo.</p>
+                    <p>Im very grateful to know you, There's so much things I want to say but I can't find the right words. The thing is Im happy to have you in my life.</p>
+                    <p>I know that im not that poetic or something like that, but I want you to know how much you mean to me. I Love you so much as the others too.</p>
+                    <p>We've been through a lot together. I love the way you send me that words on my birthday it makes me so happy and touched. And you accept me Who am i. You know what i mean.</p>
+                    <p>Sometimes I wonder how lucky I am to have you in my life. We're gonna be busy in this 4 years of collage. I hope we can make the most of it.</p>
+                    <p>What I want to say is… I'm sorry if I've ever made you sad or hurt you in any way. You deserve all the happiness in the world.</p>
+                    <p>If you ever missed me just watch the moon, We're still in the same sky. I know this year is going to be more tougher than the last.</p>
+                    <p>Im sorry if i cant give you a proper gift. I hope you like it anyway. Either ways I hope you have what you want it the most. I hope were still friends even tho we walked different paths.</p>
+                    <p>Did you know that when i type this message, I want to cry, holding my tears. I hope you the best.</p>
+                    <p>I cant wait for tommorrow at 19 September. Thats the time when we get to be together watching that concert.</p>
                     <p class="text-white font-semibold">Happy Birthday once again, Dhila 🤍</p>
-                    <p>Aku selalu support kamu, dari jauh ataupun deket.</p>
+                    <p>I always support you, from a distance or up close.</p>
                 </div>
 
-                <div class="mt-8 p-6 rounded-2xl glass-card border-l-4 border-l-sinnergreen flex items-start gap-4 shadow-xl">
+                <div class="mt-8 p-4 md:p-6 rounded-2xl glass-card border-l-4 border-l-sinnergreen flex items-start gap-4 shadow-xl">
                     <i class="fa-solid fa-quote-left text-2xl text-sinnergreen mt-1"></i>
                     <div>
-                        <p class="font-orbitron italic text-sinnergreen text-sm md:text-base tracking-wider tennis-glow">
+                        <p class="font-orbitron italic text-sinnergreen text-xs md:text-base tracking-wider tennis-glow">
                             &ldquo;"I want to be the best, so whatever comes with that, I'll have to accept."&rdquo;
                         </p>
                         <p class="font-rajdhani text-xs text-slate-400 mt-2 uppercase tracking-widest">&ndash; Sidney Crosby</p>
@@ -474,53 +638,75 @@
                 </div>
             </section>
 
-            <section class="glass-panel rounded-3xl p-6 md:p-10 text-center border border-neonpurple/30 shadow-2xl" data-aos="fade-up">
-                <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-neonpurple/20 border border-neonpurple/50 text-neonviolet font-orbitron text-xs tracking-widest mb-4">
+            <!-- VIDEO MULTIMEDIA -->
+            <section class="glass-panel rounded-3xl p-5 md:p-10 text-center border border-neonpurple/30 shadow-2xl" data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neonpurple/20 border border-neonpurple/50 text-neonviolet font-orbitron text-[10px] md:text-xs tracking-widest mb-3 md:mb-4">
                     <i class="fa-solid fa-film text-penguingold"></i> MULTIMEDIA FILE
                 </div>
-                <h3 class="font-orbitron font-bold text-2xl md:text-3xl text-penguingold gold-glow mb-6">
+                <h3 class="font-orbitron font-bold text-xl md:text-3xl text-penguingold gold-glow mb-4 md:mb-6">
                     For You 🎞️
                 </h3>
                 
                 <div class="relative max-w-2xl mx-auto rounded-2xl overflow-hidden glass-panel border border-neonpurple/50 shadow-2xl">
-                    <video id="myVideo" controls class="w-full h-auto block" preload="metadata">
-                        <source src="ryonakayang.mp4" type="video/mp4">
+                    <video id="myVideo" controls playsinline class="w-full h-auto block bg-black" preload="metadata">
+                        <source src="ABDDHILA.mp4" type="video/mp4">
                         Your browser does not support video playback.
                     </video>
                 </div>
-                <p class="font-rajdhani italic text-neonviolet text-sm md:text-base mt-4 tracking-wider">
+                <p class="font-rajdhani italic text-neonviolet text-xs md:text-base mt-4 tracking-wider">
                     I made this just for you.
                 </p>
             </section>
 
-            <!-- INTEGRATED PHOTOBOOTH SECTION -->
-            <section id="photobooth-section" class="glass-panel rounded-3xl p-6 md:p-10 border border-sinnergreen/40 shadow-2xl relative overflow-hidden" data-aos="fade-up">
-                <div class="absolute -top-20 -left-20 w-64 h-64 bg-sinnergreen/10 rounded-full blur-3xl pointer-events-none"></div>
+            <!-- SPOTIFY PLAYLIST SECTION -->
+            <section class="glass-panel rounded-3xl p-5 md:p-10 text-center border border-sinnergreen/30 shadow-2xl relative overflow-hidden" data-aos="fade-up">
+                <div class="absolute -bottom-20 -right-20 w-48 h-48 md:w-64 md:h-64 bg-sinnergreen/15 rounded-full blur-3xl pointer-events-none"></div>
                 
-                <div class="text-center mb-8">
-                    <span class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-sinnergreen/20 border border-sinnergreen/50 text-sinnergreen font-orbitron text-xs tracking-widest mb-3">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sinnergreen/20 border border-sinnergreen/50 text-sinnergreen font-orbitron text-[10px] md:text-xs tracking-widest mb-3 md:mb-4">
+                    <i class="fa-brands fa-spotify text-emerald-400"></i> COSMIC FREQUENCIES
+                </div>
+                <h3 class="font-orbitron font-bold text-xl md:text-3xl text-sinnergreen tennis-glow mb-4 md:mb-6">
+                    Vibes for Level 19 🎧
+                </h3>
+                
+                <div class="relative max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-neonpurple/30 group">
+                    <iframe style="border-radius:16px; position: relative; z-index: 10;" src="https://open.spotify.com/embed/playlist/2HC77HgWomjwWIpiWXBEEa?utm_source=generator&si=c88743ae38894983" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <p class="font-sans italic text-slate-300 text-xs md:text-sm mt-4 tracking-wider">
+                    Soundtrack buat nemenin hari-harimu ke depannya ✨
+                </p>
+            </section>
+
+            <!-- PRO PHOTOBOOTH SECTION -->
+            <section id="photobooth-section" class="glass-panel rounded-3xl p-5 md:p-10 border border-sinnergreen/40 shadow-2xl relative overflow-hidden" data-aos="fade-up">
+                <div class="absolute -top-20 -left-20 w-48 h-48 md:w-64 md:h-64 bg-sinnergreen/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="text-center mb-6 md:mb-8">
+                    <span class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-sinnergreen/20 border border-sinnergreen/50 text-sinnergreen font-orbitron text-[10px] md:text-xs tracking-widest mb-3">
                         MEMORY MAKER &bull; PHOTOBOOTH
                     </span>
-                    <h3 class="font-orbitron font-bold text-2xl md:text-3xl text-sinnergreen tennis-glow">
+                    <h3 class="font-orbitron font-bold text-xl md:text-3xl text-sinnergreen tennis-glow">
                         Stellar Photobooth 📸
                     </h3>
-                    <p class="font-rajdhani text-xs text-slate-300 mt-1">Ambil 3 foto spesial dan abadikan dalam photostrip bertema kosmik!</p>
+                    <p class="font-sans text-xs md:text-sm text-slate-300 mt-1">Ambil 3 foto spesial, pilih tema bingkai, dan download photostrip bertema kosmik!</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <!-- LIVE CAMERA & CONTROLS -->
-                    <div class="flex flex-col gap-4">
-                        <div class="relative rounded-2xl overflow-hidden bg-black aspect-[3/4] shadow-2xl flex items-center justify-center border-2 border-neonpurple/50">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+                    <!-- CAMERA & FILTERS -->
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="relative w-full max-w-sm mx-auto rounded-2xl overflow-hidden bg-black aspect-[3/4] shadow-2xl flex items-center justify-center border-2 border-neonpurple/50">
                             <video id="webcam" autoplay playsinline class="w-full h-full object-cover video-mirror"></video>
                             
-                            <div id="boothCountdown" class="absolute inset-0 bg-deepspace/80 backdrop-blur-md flex items-center justify-center text-penguingold text-7xl font-orbitron font-bold hidden z-10 gold-glow">
+                            <div id="cameraFlash"></div>
+
+                            <div id="boothCountdown" class="absolute inset-0 bg-deepspace/85 backdrop-blur-md flex items-center justify-center text-penguingold text-6xl md:text-8xl font-orbitron font-black hidden z-10 gold-glow">
                                 3
                             </div>
 
                             <div id="camPlaceholder" class="absolute inset-0 bg-nebula/95 flex flex-col items-center justify-center p-6 text-white text-center z-20">
-                                <i class="fa-solid fa-camera w-12 h-12 text-neonviolet mb-3 animate-bounce"></i>
-                                <h4 class="font-orbitron font-bold text-lg mb-1 text-penguingold">Siap Berpose?</h4>
-                                <p class="font-rajdhani text-xs text-slate-300 mb-6">Izinkan akses kamera browser kamu untuk mulai merekam momen ✨</p>
+                                <i class="fa-solid fa-camera w-12 h-12 text-neonviolet mb-3 animate-bounce text-4xl"></i>
+                                <h4 class="font-orbitron font-bold text-base md:text-lg mb-1 text-penguingold">Siap Berpose?</h4>
+                                <p class="font-sans text-xs text-slate-300 mb-6">Izinkan akses kamera browser kamu untuk mulai merekam momen ✨</p>
                                 <button onclick="startCamera()" class="px-6 py-3 rounded-xl bg-gradient-to-r from-neonpurple to-neonviolet hover:opacity-90 text-white font-orbitron text-xs tracking-wider shadow-lg transition active:scale-95 flex items-center gap-2">
                                     <i class="fa-solid fa-video"></i>
                                     <span>Nyalakan Kamera 🎥</span>
@@ -528,25 +714,39 @@
                             </div>
                         </div>
 
-                        <!-- FILTERS & CONTROLS -->
-                        <div class="glass-card p-4 rounded-2xl flex flex-col gap-3 border border-neonpurple/30">
+                        <!-- FILTERS & FRAME SELECTOR -->
+                        <div class="glass-card p-4 rounded-2xl flex flex-col gap-3 border border-neonpurple/30 max-w-sm mx-auto w-full">
                             <span class="font-orbitron text-xs font-bold text-neonviolet tracking-wider flex items-center gap-2">
-                                <i class="fa-solid fa-sliders text-sinnergreen"></i> Pilih Filter Kamera
+                                <i class="fa-solid fa-sliders text-sinnergreen"></i> Filter FX
                             </span>
                             
-                            <div class="grid grid-cols-3 gap-2">
-                                <button onclick="applyFilter('normal')" id="btnFilterNormal" class="filter-btn py-2 px-3 rounded-xl bg-neonpurple text-white font-orbitron text-xs transition shadow-sm flex items-center justify-center">
+                            <div class="grid grid-cols-4 gap-2">
+                                <button onclick="applyFilter('normal')" id="btnFilterNormal" class="filter-btn py-2 px-2 rounded-xl bg-neonpurple text-white font-orbitron text-[10px] transition shadow-sm">
                                     Normal
                                 </button>
-                                <button onclick="applyFilter('bw')" id="btnFilterBw" class="filter-btn py-2 px-3 rounded-xl bg-deepspace text-slate-300 hover:bg-neonpurple/30 border border-neonpurple/30 font-orbitron text-xs transition shadow-sm flex items-center justify-center">
-                                    B&W
+                                <button onclick="applyFilter('bw')" id="btnFilterBw" class="filter-btn py-2 px-2 rounded-xl bg-deepspace text-slate-300 hover:bg-neonpurple/30 border border-neonpurple/30 font-orbitron text-[10px] transition shadow-sm">
+                                    Noir
                                 </button>
-                                <button onclick="applyFilter('warm')" id="btnFilterWarm" class="filter-btn py-2 px-3 rounded-xl bg-deepspace text-slate-300 hover:bg-neonpurple/30 border border-neonpurple/30 font-orbitron text-xs transition shadow-sm flex items-center justify-center">
+                                <button onclick="applyFilter('warm')" id="btnFilterWarm" class="filter-btn py-2 px-2 rounded-xl bg-deepspace text-slate-300 hover:bg-neonpurple/30 border border-neonpurple/30 font-orbitron text-[10px] transition shadow-sm">
                                     Warm
+                                </button>
+                                <button onclick="applyFilter('cyber')" id="btnFilterCyber" class="filter-btn py-2 px-2 rounded-xl bg-deepspace text-slate-300 hover:bg-neonpurple/30 border border-neonpurple/30 font-orbitron text-[10px] transition shadow-sm">
+                                    Cyber
                                 </button>
                             </div>
 
-                            <button id="btnStopCam" onclick="stopCamera()" disabled class="w-full py-2 px-3 rounded-xl bg-rose-950/40 border border-rose-500/30 text-rose-300 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-rose-900/50 font-orbitron text-xs transition flex items-center justify-center gap-2">
+                            <span class="font-orbitron text-xs font-bold text-penguingold tracking-wider flex items-center gap-2 mt-1">
+                                <i class="fa-solid fa-palette"></i> Frame Theme
+                            </span>
+
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="setFrameTheme('dark')" id="frameDark" class="frame-theme-btn py-1.5 px-2 rounded-xl bg-neonpurple/40 border border-neonpurple text-white font-orbitron text-[10px]">Deep Space 🌌</button>
+                                <button onclick="setFrameTheme('gold')" id="frameGold" class="frame-theme-btn py-1.5 px-2 rounded-xl bg-deepspace border border-slate-700 text-slate-300 font-orbitron text-[10px]">Gold Crown 👑</button>
+                                <button onclick="setFrameTheme('violet')" id="frameViolet" class="frame-theme-btn py-1.5 px-2 rounded-xl bg-deepspace border border-slate-700 text-slate-300 font-orbitron text-[10px]">Neon Violet 🔮</button>
+                                <button onclick="setFrameTheme('rose')" id="frameRose" class="frame-theme-btn py-1.5 px-2 rounded-xl bg-deepspace border border-slate-700 text-slate-300 font-orbitron text-[10px]">Gothic Rose 🌹</button>
+                            </div>
+
+                            <button id="btnStopCam" onclick="stopCamera()" disabled class="w-full py-2 px-3 rounded-xl bg-rose-950/40 border border-rose-500/30 text-rose-300 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-rose-900/50 font-orbitron text-xs transition flex items-center justify-center gap-2 mt-2">
                                 <i class="fa-solid fa-video-slash"></i>
                                 <span>Matikan Kamera</span>
                             </button>
@@ -554,20 +754,25 @@
                     </div>
 
                     <!-- PHOTOSTRIP RESULT -->
-                    <div class="flex flex-col items-center justify-center h-full">
-                        <h4 class="font-orbitron font-bold text-lg text-penguingold gold-glow mb-3">Hasil Photostrip 💖</h4>
+                    <div class="flex flex-col items-center justify-center h-full w-full">
+                        <h4 class="font-orbitron font-bold text-base md:text-lg text-penguingold gold-glow mb-3">Hasil Photostrip 💖</h4>
                         
-                        <canvas id="photostripCanvas" width="1080" height="1920" class="hidden"></canvas>
+                        <canvas id="photostripCanvas" width="1200" height="3600" class="hidden"></canvas>
                         
-                        <div id="resultPreviewContainer" class="relative rounded-2xl p-2 glass-panel border border-neonpurple/50 max-w-[240px] w-full min-h-[380px] flex items-center justify-center shadow-2xl">
-                            <span id="placeholderResultText" class="font-rajdhani text-xs text-slate-400 italic text-center px-4">Belum ada foto yang diambil ✨</span>
-                            <img id="finalPhotostripImg" src="" class="w-full h-auto rounded-xl hidden shadow-lg" />
+                        <div id="resultPreviewContainer" class="relative rounded-2xl p-2 glass-panel border border-neonpurple/50 max-w-[220px] md:max-w-[260px] w-full shadow-2xl bg-black/40 flex flex-col items-center justify-center min-h-[320px] group cursor-pointer" onclick="openStripModal()">
+                            <p id="placeholderResultText" class="font-sans text-xs text-slate-400 text-center px-4">
+                                Belum ada foto.<br>Klik <span class="text-sinnergreen font-bold">Mulai (3 Snap)</span> untuk mengambil foto photostrip! ✨
+                            </p>
+                            <img id="finalPhotostripImg" src="" class="w-full h-auto rounded-xl shadow-xl hidden group-hover:scale-105 transition duration-300" alt="Photostrip Result" />
+                            <div id="zoomHintOverlay" class="absolute inset-0 bg-deepspace/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-xl text-penguingold font-orbitron text-xs tracking-wider gap-2 hidden">
+                                <i class="fa-solid fa-magnifying-glass-plus text-lg"></i> Klik untuk Memperbesar
+                            </div>
                         </div>
 
-                        <div class="w-full max-w-[240px] space-y-3 mt-4">
+                        <div class="w-full max-w-[220px] md:max-w-[260px] space-y-3 mt-4">
                             <button id="btnTakePhoto" onclick="startPhotoboothSession()" disabled class="w-full py-3.5 rounded-xl bg-gradient-to-r from-sinnergreen to-teal-600 hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed text-deepspace font-orbitron font-bold text-xs tracking-wider shadow-lg active:scale-95 transition flex items-center justify-center gap-2">
                                 <i class="fa-solid fa-camera-retro"></i>
-                                <span>Mulai Foto (3 Snap)</span>
+                                <span>Mulai (3 Snap)</span>
                             </button>
 
                             <a id="btnDownloadStrip" href="#" download="Dhila-19th-Photostrip.png" class="w-full py-3 rounded-xl glass-panel border border-penguingold/50 text-penguingold font-orbitron font-bold text-xs tracking-wider shadow-md hover:bg-penguingold/10 active:scale-95 transition hidden flex items-center justify-center gap-2">
@@ -579,63 +784,65 @@
                 </div>
             </section>
 
-            <section class="glass-panel rounded-3xl p-8 md:p-10 text-center border border-sinnergreen/30 shadow-2xl relative overflow-hidden" data-aos="fade-up">
+            <!-- COUNTDOWN TIMER SECTION -->
+            <section class="glass-panel rounded-3xl p-6 md:p-10 text-center border border-sinnergreen/30 shadow-2xl relative overflow-hidden" data-aos="fade-up">
                 <div class="absolute inset-0 bg-gradient-to-r from-sinnergreen/5 via-transparent to-neonpurple/5 pointer-events-none"></div>
                 
-                <h3 class="font-orbitron font-bold text-xl md:text-2xl text-sinnergreen tennis-glow mb-4">
-                    Countdown to Next Milestone (September 9th)
+                <h3 class="font-orbitron font-bold text-lg md:text-2xl text-sinnergreen tennis-glow mb-2 md:mb-4">
+                    Countdown to Next Milestone
                 </h3>
-                <p id="countdown" class="font-orbitron font-black text-2xl md:text-4xl text-white tracking-widest py-4">
+                <p id="countdown" class="font-orbitron font-black text-xl md:text-4xl text-white tracking-widest py-3 md:py-4">
                     Calculating...
                 </p>
-                <p class="font-rajdhani text-xs tracking-[0.3em] text-slate-400 uppercase mt-2">
-                    Target Coordinate: September 9th &bull; Interstellar Clock
+                <p class="font-rajdhani text-xs tracking-[0.2em] text-slate-400 uppercase mt-1 md:mt-2">
+                    Target Coordinate: September 8th &bull; Interstellar Clock
                 </p>
             </section>
 
-            <section class="glass-panel rounded-3xl p-6 md:p-10 border border-neonpurple/30 shadow-2xl" data-aos="fade-up">
-                <div class="text-center mb-8">
-                    <span class="inline-block px-4 py-1 rounded-full bg-neonpurple/20 border border-neonpurple/50 text-neonviolet font-orbitron text-xs tracking-widest mb-3">
+            <!-- GALLERY SECTION -->
+            <section class="glass-panel rounded-3xl p-5 md:p-10 border border-neonpurple/30 shadow-2xl" data-aos="fade-up">
+                <div class="text-center mb-6 md:mb-8">
+                    <span class="inline-block px-4 py-1 rounded-full bg-neonpurple/20 border border-neonpurple/50 text-neonviolet font-orbitron text-[10px] md:text-xs tracking-widest mb-3">
                         VISUAL ARCHIVES
                     </span>
-                    <h3 class="font-orbitron font-bold text-2xl md:text-3xl text-penguingold gold-glow">
+                    <h3 class="font-orbitron font-bold text-xl md:text-3xl text-penguingold gold-glow">
                         Photo Gallery
                     </h3>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                     <div class="glass-card rounded-2xl overflow-hidden group">
                         <div class="aspect-[3/4] overflow-hidden">
-                            <img src="ryona2.jpeg" alt="Dhila in action" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter brightness-90 group-hover:brightness-100" loading="lazy">
+                            <img src="Dhila2.jpeg" alt="Dhila in action" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter brightness-90 group-hover:brightness-100" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80'">
                         </div>
-                        <div class="p-4 text-center">
+                        <div class="p-3 text-center">
                             <span class="font-orbitron text-xs text-neonviolet tracking-wider">LOG #01</span>
                         </div>
                     </div>
 
                     <div class="glass-card rounded-2xl overflow-hidden group">
                         <div class="aspect-[3/4] overflow-hidden">
-                            <img src="ryona3.jpg" alt="Dhila" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter brightness-90 group-hover:brightness-100" loading="lazy">
+                            <img src="Dhila3.jpeg" alt="Dhila" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter brightness-90 group-hover:brightness-100" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80'">
                         </div>
-                        <div class="p-4 text-center">
+                        <div class="p-3 text-center">
                             <span class="font-orbitron text-xs text-neonviolet tracking-wider">LOG #02</span>
                         </div>
                     </div>
 
                     <div class="glass-card rounded-2xl overflow-hidden group">
                         <div class="aspect-[3/4] overflow-hidden">
-                            <img src="ryona4.jpg" alt="Dhila smiling" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter brightness-90 group-hover:brightness-100" loading="lazy">
+                            <img src="Dhila4.jpeg" alt="Dhila smiling" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter brightness-90 group-hover:brightness-100" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80'">
                         </div>
-                        <div class="p-4 text-center">
+                        <div class="p-3 text-center">
                             <span class="font-orbitron text-xs text-neonviolet tracking-wider">LOG #03</span>
                         </div>
                     </div>
 
                     <div class="glass-card rounded-2xl overflow-hidden group">
                         <div class="aspect-[3/4] overflow-hidden">
-                            <img src="ryona1.jpeg" alt="Dhila in helmet" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter brightness-90 group-hover:brightness-100" loading="lazy">
+                            <img src="Dhila1.jpeg" alt="Dhila in helmet" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter brightness-90 group-hover:brightness-100" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80'">
                         </div>
-                        <div class="p-4 text-center">
+                        <div class="p-3 text-center">
                             <span class="font-orbitron text-xs text-neonviolet tracking-wider">LOG #04</span>
                         </div>
                     </div>
@@ -643,9 +850,9 @@
             </section>
         </main>
 
-        <footer class="text-center py-10 border-t border-neonpurple/20 bg-deepspace/80 backdrop-blur-md relative z-10 mt-20">
-            <p class="font-orbitron text-xs md:text-sm tracking-[0.3em] text-neonviolet">
-                MADE BY MIZUTO &bull; INTERSTELLAR PROTOCOL v19
+        <footer class="text-center py-10 border-t border-neonpurple/20 bg-deepspace/80 backdrop-blur-md relative z-10 mt-16 md:mt-24">
+            <p class="font-orbitron text-xs md:text-sm tracking-[0.25em] text-neonviolet px-4">
+                MADE WITH 🤍 BY MIZUTO &bull; INTERSTELLAR PROTOCOL v19
             </p>
         </footer>
     </div>
@@ -655,13 +862,69 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        AOS.init({
-            once: true,
-            offset: 100,
-            duration: 800,
-        });
+        // Web Audio Synthesizer SFX Engine (Zero External File Dependencies for SFX)
+        const AudioFX = {
+            ctx: null,
+            init() {
+                if (!this.ctx) {
+                    this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+            },
+            playStarChime() {
+                this.init();
+                if(!this.ctx) return;
+                const now = this.ctx.currentTime;
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(880, now);
+                osc.frequency.exponentialRampToValueAtTime(1760, now + 0.25);
+                gain.gain.setValueAtTime(0.2, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+                osc.start(now);
+                osc.stop(now + 0.25);
+            },
+            playShutter() {
+                this.init();
+                if(!this.ctx) return;
+                const now = this.ctx.currentTime;
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(180, now);
+                osc.frequency.exponentialRampToValueAtTime(30, now + 0.15);
+                gain.gain.setValueAtTime(0.5, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.15);
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+                osc.start(now);
+                osc.stop(now + 0.15);
+            },
+            playLevelWin() {
+                this.init();
+                if(!this.ctx) return;
+                const notes = [523.25, 659.25, 783.99, 1046.50];
+                notes.forEach((freq, idx) => {
+                    const now = this.ctx.currentTime + (idx * 0.1);
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.value = freq;
+                    gain.gain.setValueAtTime(0.25, now);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+                    osc.start(now);
+                    osc.stop(now + 0.35);
+                });
+            }
+        };
 
-        // Starfield & Shooting Stars Canvas Background
+        AOS.init({ once: true, offset: 50, duration: 800 });
+
+        // Starfield & Canvas Engine (Optimized 1000x)
         const canvas = document.getElementById('space-canvas');
         const ctx = canvas.getContext('2d');
         let stars = [];
@@ -670,36 +933,35 @@
         function resizeCanvas() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
+            stars = [];
+            const numStars = window.innerWidth < 768 ? 150 : 300;
+            for (let i = 0; i < numStars; i++) {
+                stars.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 2.2,
+                    alpha: Math.random(),
+                    speed: Math.random() * 0.015 + 0.004
+                });
+            }
         }
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
-
-        for (let i = 0; i < 220; i++) {
-            stars.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                radius: Math.random() * 2,
-                alpha: Math.random(),
-                speed: Math.random() * 0.01 + 0.002
-            });
-        }
 
         function createShootingStar() {
             return {
                 x: Math.random() * canvas.width,
                 y: Math.random() * (canvas.height / 2),
-                length: Math.random() * 80 + 40,
-                speed: Math.random() * 10 + 6,
+                length: Math.random() * 110 + 60,
+                speed: Math.random() * 14 + 8,
                 angle: Math.PI / 4,
                 opacity: 1,
-                fadeRate: Math.random() * 0.03 + 0.015
+                fadeRate: Math.random() * 0.022 + 0.012
             };
         }
 
         setInterval(() => {
-            if (shootingStars.length < 3) {
-                shootingStars.push(createShootingStar());
-            }
+            if (shootingStars.length < 4) shootingStars.push(createShootingStar());
         }, 2000);
 
         function animateSpace() {
@@ -707,16 +969,15 @@
 
             stars.forEach(star => {
                 star.alpha += star.speed;
-                if (star.alpha > 1 || star.alpha < 0) {
-                    star.speed = -star.speed;
-                }
+                if (star.alpha > 1 || star.alpha < 0) star.speed = -star.speed;
                 ctx.beginPath();
                 ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(199, 125, 255, ${Math.abs(star.alpha)})`;
                 ctx.fill();
             });
 
-            shootingStars.forEach((ss, index) => {
+            for (let i = shootingStars.length - 1; i >= 0; i--) {
+                const ss = shootingStars[i];
                 ss.x += ss.speed * Math.cos(ss.angle);
                 ss.y += ss.speed * Math.sin(ss.angle);
                 ss.opacity -= ss.fadeRate;
@@ -726,20 +987,20 @@
 
                 let gradient = ctx.createLinearGradient(ss.x, ss.y, tailX, tailY);
                 gradient.addColorStop(0, `rgba(255, 255, 255, ${Math.max(ss.opacity, 0)})`);
-                gradient.addColorStop(0.5, `rgba(199, 125, 255, ${Math.max(ss.opacity * 0.6, 0)})`);
+                gradient.addColorStop(0.5, `rgba(199, 125, 255, ${Math.max(ss.opacity * 0.7, 0)})`);
                 gradient.addColorStop(1, 'rgba(157, 78, 221, 0)');
 
                 ctx.beginPath();
                 ctx.moveTo(ss.x, ss.y);
                 ctx.lineTo(tailX, tailY);
                 ctx.strokeStyle = gradient;
-                ctx.lineWidth = 2;
+                ctx.lineWidth = 3;
                 ctx.stroke();
 
                 if (ss.opacity <= 0 || ss.x > canvas.width || ss.y > canvas.height) {
-                    shootingStars.splice(index, 1);
+                    shootingStars.splice(i, 1);
                 }
-            });
+            }
 
             requestAnimationFrame(animateSpace);
         }
@@ -751,12 +1012,12 @@
                 loader.style.opacity = "0";
                 setTimeout(() => {
                     loader.style.display = "none";
-                    const envelopeOverlay = document.getElementById("envelope-overlay");
-                    envelopeOverlay.classList.remove("hidden");
+                    document.getElementById("envelope-overlay").classList.remove("hidden");
                 }, 1000);
-            }, 2000);
+            }, 1200);
         });
 
+        // Envelope & Transition Logic
         const envelopeBtn = document.getElementById("envelopeBtn");
         const envelopeOverlay = document.getElementById("envelope-overlay");
         const mainContent = document.getElementById("main-content");
@@ -768,22 +1029,23 @@
         let playing = false;
 
         envelopeBtn.addEventListener("click", () => {
-            envelopeBtn.querySelector('.envelope-wrapper').classList.add("open");
+            AudioFX.init();
+            const envelopeWrapper = envelopeBtn.querySelector('.envelope-wrapper');
+            envelopeWrapper.classList.add("open");
 
             music.play().then(() => {
                 playing = true;
-                musicIcon.className = "fa-solid fa-pause text-lg";
-                musicBtn.classList.add("ring-2", "ring-penguingold");
+                musicIcon.className = "fa-solid fa-pause text-sm md:text-base text-penguingold";
             }).catch(() => {});
 
             setTimeout(() => {
                 confetti({
-                    particleCount: 300,
-                    spread: 140,
-                    origin: { y: 0.6 },
+                    particleCount: window.innerWidth < 768 ? 200 : 380,
+                    spread: 150,
+                    origin: { y: 0.55 },
                     colors: ['#9d4edd', '#c77dff', '#ffb81c', '#2ec4b6', '#ffffff']
                 });
-            }, 900);
+            }, 750);
 
             setTimeout(() => {
                 envelopeOverlay.style.opacity = "0";
@@ -796,33 +1058,30 @@
                     musicBtn.classList.remove("hidden");
                     AOS.refresh();
                 }, 1000);
-            }, 2500); 
+            }, 2400); 
         });
 
         musicBtn.addEventListener("click", () => {
             if (!playing) {
                 music.play().catch(() => {});
-                musicIcon.className = "fa-solid fa-pause text-lg";
-                musicBtn.classList.add("ring-2", "ring-penguingold");
+                musicIcon.className = "fa-solid fa-pause text-sm md:text-base text-penguingold";
             } else {
                 music.pause();
-                musicIcon.className = "fa-solid fa-play text-lg";
-                musicBtn.classList.remove("ring-2", "ring-penguingold");
+                musicIcon.className = "fa-solid fa-play text-sm md:text-base text-penguingold";
             }
             playing = !playing;
         });
 
+        // Milestone Countdown
         const countdownElement = document.getElementById('countdown');
-        function getNextSeptember9th() {
+        function getNextSeptember8th() {
             const now = new Date();
             let year = now.getFullYear();
-            let target = new Date(year, 8, 9, 0, 0, 0);
-            if (now.getTime() > target.getTime()) {
-                target = new Date(year + 1, 8, 9, 0, 0, 0);
-            }
+            let target = new Date(year, 8, 8, 0, 0, 0); 
+            if (now.getTime() > target.getTime()) target = new Date(year + 1, 8, 8, 0, 0, 0);
             return target.getTime();
         }
-        const targetDate = getNextSeptember9th();
+        const targetDate = getNextSeptember8th();
 
         function updateCountdown(){
             const now = new Date().getTime();
@@ -836,23 +1095,23 @@
 
                 countdownElement.innerHTML = `${days}D : ${hours}H : ${minutes}M : ${seconds}S`;
             } else {
-                countdownElement.innerHTML = "🎉 HAPPY BIRTHDAY, DHILA! 🎂";
+                countdownElement.innerHTML = "🎉 HAPPY BIRTHDAY! 🎂";
             }
         }
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
+        // Pause audio on video play
         const video = document.getElementById("myVideo");
         video.addEventListener("play", () => {
             if(playing) {
                 music.pause();
-                musicIcon.className = "fa-solid fa-play text-lg";
-                musicBtn.classList.remove("ring-2", "ring-penguingold");
+                musicIcon.className = "fa-solid fa-play text-sm md:text-base text-penguingold";
                 playing = false;
             }
         });
 
-        // --- CONSTELLATION MINI GAME ENGINE ---
+        // CONSTELLATION MINI GAME ENGINE
         const openGameBtn = document.getElementById('openGameBtn');
         const closeGameBtn = document.getElementById('closeGameBtn');
         const resetGameBtn = document.getElementById('resetGameBtn');
@@ -882,38 +1141,49 @@
                 name: "Level 1: Pittsburgh Penguins Emblem 🐧",
                 instruction: "Hubungkan titik-titik sesuai bentuk segitiga perisai & pinguin logo Pittsburgh Penguins!",
                 stars: [
-                    { id: 1, x: 210, y: 330, label: '1' },
-                    { id: 2, x: 335, y: 70, label: '2' },
-                    { id: 3, x: 85, y: 70, label: '3' },
-                    { id: 4, x: 210, y: 330, label: '4' },
-                    { id: 5, x: 175, y: 140, label: '5' },
-                    { id: 6, x: 240, y: 175, label: '6' },
-                    { id: 7, x: 295, y: 240, label: '7' },
-                    { id: 8, x: 125, y: 330, label: '8' }
+                    { id: 1, x: 220, y: 340, label: '1' },
+                    { id: 2, x: 350, y: 80, label: '2' },
+                    { id: 3, x: 90, y: 80, label: '3' },
+                    { id: 4, x: 220, y: 340, label: '4' },
+                    { id: 5, x: 185, y: 150, label: '5' },
+                    { id: 6, x: 250, y: 185, label: '6' },
+                    { id: 7, x: 305, y: 250, label: '7' },
+                    { id: 8, x: 135, y: 340, label: '8' }
                 ]
             },
             {
-                name: "Level 2: The Cosmic Penguin 🐧",
-                instruction: "Hubungkan rasi bintang bentuk figur pinguin kosmik intergalaksi!",
+                name: "Level 2: The Orion",
+                instruction: "Hubungkan rasi bintang bentuk figur The Orion Hunter yang sempurna!",
                 stars: [
-                    { id: 1, x: 210, y: 65, label: '1' },
-                    { id: 2, x: 150, y: 135, label: '2' },
-                    { id: 3, x: 270, y: 135, label: '3' },
-                    { id: 4, x: 210, y: 220, label: '4' },
-                    { id: 5, x: 160, y: 340, label: '5' },
-                    { id: 6, x: 260, y: 340, label: '6' }
+                    { id: 1, x: 340, y: 130, label: '1' },   
+                    { id: 2, x: 360, y: 170, label: '2' },   
+                    { id: 3, x: 330, y: 230, label: '3' },   
+                    { id: 4, x: 280, y: 170, label: '4' },   
+                    { id: 5, x: 230, y: 120, label: '5' },   
+                    { id: 6, x: 180, y: 160, label: '6' },   
+                    { id: 7, x: 130, y: 130, label: '7' },   
+                    { id: 8, x: 90,  y: 160, label: '8' },   
+                    { id: 9, x: 140, y: 200, label: '9' },   
+                    { id: 10, x: 190, y: 240, label: '10' }, 
+                    { id: 11, x: 160, y: 340, label: '11' }, 
+                    { id: 12, x: 270, y: 310, label: '12' }, 
+                    { id: 13, x: 260, y: 230, label: '13' }, 
+                    { id: 14, x: 225, y: 235, label: '14' }, 
+                    { id: 15, x: 190, y: 240, label: '15' }, 
+                    { id: 16, x: 180, y: 160, label: '16' }  
                 ]
             },
             {
                 name: "Level 3: The Starry Heart 🤍",
                 instruction: "Satukan bintang-bintang terakhir untuk membentuk hati kosmik abadi!",
                 stars: [
-                    { id: 1, x: 210, y: 110, label: '1' },
-                    { id: 2, x: 140, y: 70, label: '2' },
-                    { id: 3, x: 80, y: 130, label: '3' },
-                    { id: 4, x: 210, y: 300, label: '4' },
-                    { id: 5, x: 340, y: 130, label: '5' },
-                    { id: 6, x: 280, y: 70, label: '6' }
+                    { id: 1, x: 220, y: 120, label: '1' },
+                    { id: 2, x: 150, y: 80, label: '2' },
+                    { id: 3, x: 90, y: 140, label: '3' },
+                    { id: 4, x: 220, y: 320, label: '4' },
+                    { id: 5, x: 350, y: 140, label: '5' },
+                    { id: 6, x: 290, y: 80, label: '6' },
+                    { id: 7, x: 220, y: 120, label: '7' }
                 ]
             }
         ];
@@ -953,7 +1223,7 @@
                 }
                 cCtx.strokeStyle = '#2ec4b6';
                 cCtx.lineWidth = 4;
-                cCtx.shadowBlur = 25;
+                cCtx.shadowBlur = 20;
                 cCtx.shadowColor = '#2ec4b6';
                 cCtx.stroke();
                 cCtx.shadowBlur = 0;
@@ -964,7 +1234,7 @@
                 cCtx.beginPath();
                 cCtx.moveTo(lastStar.x, lastStar.y);
                 cCtx.lineTo(hoverPos.x, hoverPos.y);
-                cCtx.strokeStyle = 'rgba(199, 125, 255, 0.5)';
+                cCtx.strokeStyle = 'rgba(199, 125, 255, 0.6)';
                 cCtx.lineWidth = 2;
                 cCtx.setLineDash([5, 5]);
                 cCtx.stroke();
@@ -994,7 +1264,7 @@
                     cCtx.fillStyle = '#ffb81c';
                     cCtx.beginPath();
                     cCtx.arc(star.x, star.y, 16, 0, Math.PI * 2);
-                    cCtx.strokeStyle = 'rgba(255, 184, 28, 0.6)';
+                    cCtx.strokeStyle = 'rgba(255, 184, 28, 0.7)';
                     cCtx.lineWidth = 2;
                     cCtx.stroke();
                 } else {
@@ -1013,6 +1283,27 @@
             });
         }
 
+        function getCanvasPos(evt) {
+            const rect = cCanvas.getBoundingClientRect();
+            const scaleX = cCanvas.width / rect.width;
+            const scaleY = cCanvas.height / rect.height;
+            let clientX = evt.clientX;
+            let clientY = evt.clientY;
+
+            if (evt.touches && evt.touches.length > 0) {
+                clientX = evt.touches[0].clientX;
+                clientY = evt.touches[0].clientY;
+            } else if (evt.changedTouches && evt.changedTouches.length > 0) {
+                clientX = evt.changedTouches[0].clientX;
+                clientY = evt.changedTouches[0].clientY;
+            }
+
+            return {
+                x: (clientX - rect.left) * scaleX,
+                y: (clientY - rect.top) * scaleY
+            };
+        }
+
         openGameBtn.addEventListener('click', () => {
             gameModal.classList.add('active');
             loadLevel(0);
@@ -1023,19 +1314,15 @@
         closeGameBtn.addEventListener('click', () => {
             gameModal.classList.remove('active');
             clearInterval(gameInterval);
+            mainContent.classList.add("opacity-100");
         });
 
-        resetGameBtn.addEventListener('click', () => {
-            loadLevel(currentLevel);
-        });
+        resetGameBtn.addEventListener('click', () => { loadLevel(currentLevel); });
 
         hintGameBtn.addEventListener('click', () => {
             showHint = true;
             drawConstellation();
-            setTimeout(() => {
-                showHint = false;
-                drawConstellation();
-            }, 2000);
+            setTimeout(() => { showHint = false; drawConstellation(); }, 2000);
         });
 
         nextLevelBtn.addEventListener('click', () => {
@@ -1046,7 +1333,7 @@
                 mainContent.classList.add("opacity-100");
                 
                 confetti({
-                    particleCount: 500,
+                    particleCount: window.innerWidth < 768 ? 250 : 550,
                     spread: 180,
                     origin: { y: 0.5 },
                     colors: ['#2ec4b6', '#ffb81c', '#c77dff', '#ffffff', '#9d4edd']
@@ -1055,42 +1342,40 @@
         });
 
         cCanvas.addEventListener('mousemove', (e) => {
-            const rect = cCanvas.getBoundingClientRect();
-            hoverPos.x = e.clientX - rect.left;
-            hoverPos.y = e.clientY - rect.top;
+            hoverPos = getCanvasPos(e);
             drawConstellation();
         });
 
         cCanvas.addEventListener('touchmove', (e) => {
-            const rect = cCanvas.getBoundingClientRect();
             if(e.touches.length > 0) {
-                hoverPos.x = e.touches[0].clientX - rect.left;
-                hoverPos.y = e.touches[0].clientY - rect.top;
+                hoverPos = getCanvasPos(e);
                 drawConstellation();
             }
         }, {passive: true});
 
-        function handleCanvasSelection(mouseX, mouseY) {
+        function handleCanvasSelection(canvasX, canvasY) {
             if (gameCompleted) return;
 
             const activeLevelStars = levelsData[currentLevel].stars;
             const targetStar = activeLevelStars[currentConnectedIndex];
             if (!targetStar) return;
 
-            const distance = Math.hypot(mouseX - targetStar.x, mouseY - targetStar.y);
+            const distance = Math.hypot(canvasX - targetStar.x, canvasY - targetStar.y);
 
-            if (distance < 35) {
+            if (distance < 45) {
+                AudioFX.playStarChime();
                 currentConnectedIndex++;
-                totalScore += 200;
+                totalScore += 250;
                 gameScoreEl.innerHTML = `<i class="fa-solid fa-star mr-1 text-penguingold"></i> SCORE: ${totalScore}`;
                 drawConstellation();
 
                 if (currentConnectedIndex === activeLevelStars.length) {
                     gameCompleted = true;
                     clearInterval(gameInterval);
+                    AudioFX.playLevelWin();
 
                     confetti({
-                        particleCount: 250,
+                        particleCount: window.innerWidth < 768 ? 140 : 280,
                         spread: 130,
                         origin: { y: 0.5 },
                         colors: ['#2ec4b6', '#ffb81c', '#c77dff', '#ffffff']
@@ -1099,10 +1384,10 @@
                     if (currentLevel < levelsData.length - 1) {
                         popupTitle.innerText = `Level ${currentLevel + 1} Cleared! ✨`;
                         popupDesc.innerText = `Luar biasa Commander Dhila! Lanjut ke rasi kosmik berikutnya.`;
-                        nextLevelBtn.innerText = "Lanjut ke Level Berikutnya →";
+                        nextLevelBtn.innerText = "Lanjut →";
                     } else {
                         popupTitle.innerText = `All Protocols Completed! 🏆`;
-                        popupDesc.innerText = `Selamat! Semua Rasi Bintang Kosmik Berhasil Disatukan. Total Skor: ${totalScore}. Selamat Ulang Tahun ke-19, Dhila! 🤍`;
+                        popupDesc.innerText = `Total Skor: ${totalScore}. Selamat Ulang Tahun ke-19, Dhila! 🤍`;
                         nextLevelBtn.innerText = "Selesai & Rayakan →";
                     }
                     gamePopup.classList.add('active');
@@ -1111,46 +1396,54 @@
         }
 
         cCanvas.addEventListener('click', (e) => {
-            const rect = cCanvas.getBoundingClientRect();
-            handleCanvasSelection(e.clientX - rect.left, e.clientY - rect.top);
+            const pos = getCanvasPos(e);
+            handleCanvasSelection(pos.x, pos.y);
         });
 
         cCanvas.addEventListener('touchend', (e) => {
-            const rect = cCanvas.getBoundingClientRect();
             if(e.changedTouches.length > 0) {
-                handleCanvasSelection(e.changedTouches[0].clientX - rect.left, e.changedTouches[0].clientY - rect.top);
+                const pos = getCanvasPos(e);
+                handleCanvasSelection(pos.x, pos.y);
             }
         });
 
-        // --- PHOTOBOOTH LOGIC & SCRIPT ---
-        const CUSTOM_FRAME_URL = ""; 
+        // PHOTOBOOTH ENGINE & ENHANCED OVERLAY FRAME
         let mediaStream = null;
         let capturedPhotos = [];
         let activeFilter = 'normal';
+        let currentFrameTheme = 'dark';
 
         function applyFilter(filterName) {
             activeFilter = filterName;
             const video = document.getElementById('webcam');
-            
-            video.classList.remove('filter-bw', 'filter-warm');
-            
-            if (filterName === 'bw') {
-                video.classList.add('filter-bw');
-            } else if (filterName === 'warm') {
-                video.classList.add('filter-warm');
-            }
+            video.classList.remove('filter-bw', 'filter-warm', 'filter-cyber');
+            if (filterName !== 'normal') video.classList.add('filter-' + filterName);
 
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.classList.remove('bg-neonpurple', 'text-white');
-                btn.classList.add('bg-deepspace', 'text-slate-300', 'hover:bg-neonpurple/30', 'border', 'border-neonpurple/30');
+                btn.classList.add('bg-deepspace', 'text-slate-300');
             });
 
             const activeBtnId = 'btnFilter' + filterName.charAt(0).toUpperCase() + filterName.slice(1);
             const activeBtn = document.getElementById(activeBtnId);
             if (activeBtn) {
-                activeBtn.classList.remove('bg-deepspace', 'text-slate-300', 'hover:bg-neonpurple/30', 'border', 'border-neonpurple/30');
+                activeBtn.classList.remove('bg-deepspace', 'text-slate-300');
                 activeBtn.classList.add('bg-neonpurple', 'text-white');
             }
+        }
+
+        function setFrameTheme(theme) {
+            currentFrameTheme = theme;
+            document.querySelectorAll('.frame-theme-btn').forEach(btn => {
+                btn.classList.remove('bg-neonpurple/40', 'border-neonpurple', 'text-white');
+                btn.classList.add('bg-deepspace', 'border-slate-700', 'text-slate-300');
+            });
+            const selectedBtn = document.getElementById('frame' + theme.charAt(0).toUpperCase() + theme.slice(1));
+            if(selectedBtn) {
+                selectedBtn.classList.remove('bg-deepspace', 'border-slate-700', 'text-slate-300');
+                selectedBtn.classList.add('bg-neonpurple/40', 'border-neonpurple', 'text-white');
+            }
+            if(capturedPhotos.length === 3) renderPhotostrip();
         }
 
         async function startCamera() {
@@ -1170,7 +1463,6 @@
                 btnStop.disabled = false;
             } catch (err) {
                 alert("Gagal mengakses kamera: Silakan izinkan akses kamera di browser kamu.");
-                console.error("Camera Error:", err);
             }
         }
 
@@ -1179,10 +1471,7 @@
                 mediaStream.getTracks().forEach(track => track.stop());
                 mediaStream = null;
             }
-
-            const video = document.getElementById('webcam');
-            video.srcObject = null;
-
+            document.getElementById('webcam').srcObject = null;
             document.getElementById('camPlaceholder').classList.remove('hidden');
             document.getElementById('btnTakePhoto').disabled = true;
             document.getElementById('btnStopCam').disabled = true;
@@ -1192,48 +1481,61 @@
             const btnTake = document.getElementById('btnTakePhoto');
             const btnStop = document.getElementById('btnStopCam');
             const countdownEl = document.getElementById('boothCountdown');
+            const flashEl = document.getElementById('cameraFlash');
             const video = document.getElementById('webcam');
             
+            if (!mediaStream || video.paused || video.ended || video.videoWidth === 0) {
+                alert("Kamera belum siap! Silakan nyalakan kamera terlebih dahulu.");
+                return;
+            }
+
             btnTake.disabled = true;
             btnStop.disabled = true;
             capturedPhotos = [];
 
-            for (let i = 1; i <= 3; i++) {
-                countdownEl.classList.remove('hidden');
-                for (let count = 3; count > 0; count--) {
-                    countdownEl.innerText = count;
-                    await new Promise(r => setTimeout(r, 1000));
-                }
+            try {
+                for (let i = 1; i <= 3; i++) {
+                    countdownEl.classList.remove('hidden');
+                    for (let count = 3; count > 0; count--) {
+                        countdownEl.innerText = count;
+                        await new Promise(r => setTimeout(r, 1000));
+                    }
 
-                countdownEl.innerText = "📸";
-                if (typeof confetti === "function") {
-                    confetti({ particleCount: 30, spread: 60, origin: { y: 0.5 } });
+                    countdownEl.innerText = "📸";
+                    AudioFX.playShutter();
+
+                    flashEl.style.opacity = '1';
+                    setTimeout(() => { flashEl.style.opacity = '0'; }, 150);
+
+                    confetti({ particleCount: 35, spread: 60, origin: { y: 0.5 } });
+                    
+                    const tempCanvas = document.createElement('canvas');
+                    const vW = video.videoWidth || 1280;
+                    const vH = video.videoHeight || 960;
+                    tempCanvas.width = vW;
+                    tempCanvas.height = vH;
+                    const tempCtx = tempCanvas.getContext('2d');
+                    
+                    tempCtx.translate(tempCanvas.width, 0);
+                    tempCtx.scale(-1, 1);
+                    tempCtx.drawImage(video, 0, 0, tempCanvas.width, tempCanvas.height);
+                    
+                    if (activeFilter === 'bw') applyCanvasBWFilter(tempCtx, tempCanvas.width, tempCanvas.height);
+                    else if (activeFilter === 'warm') applyCanvasWarmFilter(tempCtx, tempCanvas.width, tempCanvas.height);
+                    else if (activeFilter === 'cyber') applyCanvasCyberFilter(tempCtx, tempCanvas.width, tempCanvas.height);
+                    
+                    capturedPhotos.push(tempCanvas);
+                    await new Promise(r => setTimeout(r, 850));
                 }
-                
-                const tempCanvas = document.createElement('canvas');
-                tempCanvas.width = video.videoWidth || 640;
-                tempCanvas.height = video.videoHeight || 480;
-                const tempCtx = tempCanvas.getContext('2d');
-                
-                tempCtx.translate(tempCanvas.width, 0);
-                tempCtx.scale(-1, 1);
-                
-                tempCtx.drawImage(video, 0, 0, tempCanvas.width, tempCanvas.height);
-                
-                if (activeFilter === 'bw') {
-                    applyCanvasBWFilter(tempCtx, tempCanvas.width, tempCanvas.height);
-                } else if (activeFilter === 'warm') {
-                    applyCanvasWarmFilter(tempCtx, tempCanvas.width, tempCanvas.height);
-                }
-                
-                capturedPhotos.push(tempCanvas);
-                await new Promise(r => setTimeout(r, 800));
+            } catch (err) {
+                console.error("Gagal saat pengambilan gambar:", err);
+                alert("Terjadi kesalahan saat mengambil foto: " + err.message);
+            } finally {
+                countdownEl.classList.add('hidden');
+                renderPhotostrip();
+                btnTake.disabled = false;
+                btnStop.disabled = false;
             }
-
-            countdownEl.classList.add('hidden');
-            renderPhotostrip();
-            btnTake.disabled = false;
-            btnStop.disabled = false;
         }
 
         function applyCanvasBWFilter(ctx, width, height) {
@@ -1241,11 +1543,8 @@
             const data = imgData.data;
             for (let i = 0; i < data.length; i += 4) {
                 let gray = 0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2];
-                gray = ((gray - 128) * 1.15) + 128;
-                gray = Math.min(255, Math.max(0, gray));
-                data[i] = gray;
-                data[i + 1] = gray;
-                data[i + 2] = gray;
+                gray = Math.min(255, Math.max(0, ((gray - 128) * 1.25) + 128));
+                data[i] = data[i + 1] = data[i + 2] = gray;
             }
             ctx.putImageData(imgData, 0, 0);
         }
@@ -1254,94 +1553,290 @@
             const imgData = ctx.getImageData(0, 0, width, height);
             const data = imgData.data;
             for (let i = 0; i < data.length; i += 4) {
-                let r = data[i];
-                let g = data[i + 1];
-                let b = data[i + 2];
-
-                let tr = Math.min(255, (r * 0.393) + (g * 0.769) + (b * 0.189));
-                let tg = Math.min(255, (r * 0.349) + (g * 0.686) + (b * 0.168));
-                let tb = Math.min(255, (r * 0.272) + (g * 0.534) + (b * 0.131));
-
-                data[i] = Math.min(255, (r * 0.65) + (tr * 0.35) + 10); 
-                data[i + 1] = Math.min(255, (g * 0.7) + (tg * 0.3));
-                data[i + 2] = Math.max(0, (b * 0.75) + (tb * 0.25) - 10); 
+                data[i] = Math.min(255, data[i] * 1.12 + 12);
+                data[i + 1] = Math.min(255, data[i + 1] * 1.02);
+                data[i + 2] = Math.max(0, data[i + 2] * 0.85);
             }
             ctx.putImageData(imgData, 0, 0);
         }
 
+        function applyCanvasCyberFilter(ctx, width, height) {
+            const imgData = ctx.getImageData(0, 0, width, height);
+            const data = imgData.data;
+            for (let i = 0; i < data.length; i += 4) {
+                let r = data[i], g = data[i+1], b = data[i+2];
+                data[i] = b;
+                data[i+1] = g;
+                data[i+2] = r;
+            }
+            ctx.putImageData(imgData, 0, 0);
+        }
+
+        function drawCoverFitImage(ctx, img, x, y, w, h, radius = 24) {
+            ctx.save();
+            ctx.beginPath();
+            ctx.moveTo(x + radius, y);
+            ctx.lineTo(x + w - radius, y);
+            ctx.quadraticCurveTo(x + w, y, x + w, y + radius);
+            ctx.lineTo(x + w, y + h - radius);
+            ctx.quadraticCurveTo(x + w, y + h, x + w - radius, y + h);
+            ctx.lineTo(x + radius, y + h);
+            ctx.quadraticCurveTo(x, y + h, x, y + h - radius);
+            ctx.lineTo(x, y + radius);
+            ctx.quadraticCurveTo(x, y, x + radius, y);
+            ctx.closePath();
+            ctx.clip();
+
+            const imgW = img.width;
+            const imgH = img.height;
+            const imgRatio = imgW / imgH;
+            const targetRatio = w / h;
+
+            let renderW, renderH, offsetX, offsetY;
+
+            if (imgRatio > targetRatio) {
+                renderH = h;
+                renderW = h * imgRatio;
+                offsetX = x - (renderW - w) / 2;
+                offsetY = y;
+            } else {
+                renderW = w;
+                renderH = w / imgRatio;
+                offsetX = x;
+                offsetY = y - (renderH - h) / 2;
+            }
+
+            ctx.drawImage(img, offsetX, offsetY, renderW, renderH);
+            ctx.restore();
+        }
+
+        function roundedRectPath(ctx, x, y, w, h, r) {
+            ctx.beginPath();
+            ctx.moveTo(x + r, y);
+            ctx.arcTo(x + w, y, x + w, y + h, r);
+            ctx.arcTo(x + w, y + h, x, y + h, r);
+            ctx.arcTo(x, y + h, x, y, r);
+            ctx.arcTo(x, y, x + w, y, r);
+            ctx.closePath();
+        }
+
+        function drawPerforation(ctx, x, y, width, color) {
+            ctx.fillStyle = color;
+            const dotCount = 14;
+            const gap = width / (dotCount - 1);
+            for (let i = 0; i < dotCount; i++) {
+                ctx.beginPath();
+                ctx.arc(x + i * gap, y, 5, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
         function renderPhotostrip() {
-            const canvas = document.getElementById('photostripCanvas');
-            const ctx = canvas.getContext('2d');
-            
-            const stripW = 1080;
-            const stripH = 1920;
-            const padding = 100;
-            const photoW = stripW - (padding * 2); 
-            const photoH = 440; 
+            try {
+                const canvas = document.getElementById('photostripCanvas');
+                const ctx = canvas.getContext('2d');
 
-            canvas.width = stripW;
-            canvas.height = stripH;
+                canvas.width = 1200;
+                canvas.height = 3600;
 
-            // Space theme background color matching #030007 / nebula
-            ctx.fillStyle = '#030007';
-            ctx.fillRect(0, 0, stripW, stripH);
+                const frameStyles = {
+                    dark: { bg: '#0b0417', bg2: '#160a2c', headerText: '#c77dff', accent: '#9d4edd', border: '#3c1361', cardBg: '#15082a' },
+                    gold: { bg: '#140c02', bg2: '#241708', headerText: '#ffb81c', accent: '#f4c430', border: '#573d08', cardBg: '#211505' },
+                    violet: { bg: '#120024', bg2: '#1e0140', headerText: '#e0aaff', accent: '#7b2cbf', border: '#4a127a', cardBg: '#20033b' },
+                    rose: { bg: '#1c050a', bg2: '#2c0a13', headerText: '#ff758f', accent: '#e63946', border: '#610f17', cardBg: '#2b0b11' }
+                };
 
-            ctx.strokeStyle = '#9d4edd';
-            ctx.lineWidth = 16;
-            ctx.strokeRect(24, 24, stripW - 48, stripH - 48);
+                const style = frameStyles[currentFrameTheme] || frameStyles.dark;
 
-            let startY = 100;
-            capturedPhotos.forEach((imgCanvas) => {
-                ctx.fillStyle = '#120524';
-                ctx.shadowColor = 'rgba(157, 78, 221, 0.4)';
-                ctx.shadowBlur = 25;
-                ctx.shadowOffsetY = 8;
-                ctx.fillRect(padding - 15, startY - 15, photoW + 30, photoH + 30);
-                
-                ctx.shadowColor = 'transparent';
-                ctx.drawImage(imgCanvas, padding, startY, photoW, photoH);
+                const bgGradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+                bgGradient.addColorStop(0, style.bg2);
+                bgGradient.addColorStop(1, style.bg);
+                ctx.fillStyle = bgGradient;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-                startY += photoH + 50;
-            });
+                roundedRectPath(ctx, 30, 30, canvas.width - 60, canvas.height - 60, 40);
+                ctx.strokeStyle = style.border;
+                ctx.lineWidth = 14;
+                ctx.stroke();
 
-            ctx.fillStyle = '#ffb81c';
-            ctx.font = 'bold 44px Orbitron, sans-serif';
-            ctx.textAlign = 'center';
-            ctx.fillText('Happy 19th Birthday Dhila 🤍', stripW / 2, stripH - 180);
+                roundedRectPath(ctx, 54, 54, canvas.width - 108, canvas.height - 108, 30);
+                ctx.strokeStyle = style.accent;
+                ctx.lineWidth = 2;
+                ctx.globalAlpha = 0.5;
+                ctx.stroke();
+                ctx.globalAlpha = 1;
 
-            ctx.fillStyle = '#c77dff';
-            ctx.font = 'bold 26px Rajdhani, sans-serif';
-            ctx.fillText('🚀 Interstellar Protocol • September 9th 🚀', stripW / 2, stripH - 120);
+                ctx.fillStyle = style.headerText;
+                ctx.font = '900 54px Orbitron';
+                ctx.textAlign = 'center';
+                ctx.fillText('DIH', canvas.width / 2, 160);
 
-            if (CUSTOM_FRAME_URL) {
-                const overlayImg = new Image();
-                overlayImg.crossOrigin = "anonymous";
-                overlayImg.onload = function() {
-                    ctx.drawImage(overlayImg, 0, 0, stripW, stripH);
+                ctx.fillStyle = style.accent;
+                ctx.font = '700 30px Orbitron';
+                ctx.fillText('HAPPY 19TH BIRTHDAY • LEVEL 19 UNLOCKED', canvas.width / 2, 225);
+
+                ctx.strokeStyle = style.accent;
+                ctx.lineWidth = 3;
+                ctx.beginPath();
+                ctx.moveTo(150, 270);
+                ctx.lineTo(560, 270);
+                ctx.moveTo(640, 270);
+                ctx.lineTo(1050, 270);
+                ctx.stroke();
+                ctx.save();
+                ctx.translate(600, 270);
+                ctx.rotate(Math.PI / 4);
+                ctx.fillStyle = style.accent;
+                ctx.fillRect(-9, -9, 18, 18);
+                ctx.restore();
+
+                const photoW = 1040;
+                const photoH = 780;
+                const startX = (canvas.width - photoW) / 2;
+                const yPositions = [330, 1170, 2010];
+
+                for (let i = 0; i < 3; i++) {
+                    const py = yPositions[i];
+
+                    ctx.save();
+                    ctx.shadowColor = 'rgba(0,0,0,0.55)';
+                    ctx.shadowBlur = 30;
+                    ctx.shadowOffsetY = 14;
+                    ctx.fillStyle = style.cardBg;
+                    roundedRectPath(ctx, startX - 14, py - 14, photoW + 28, photoH + 28, 34);
+                    ctx.fill();
+                    ctx.restore();
+
+                    if (capturedPhotos[i]) {
+                        ctx.save();
+                        roundedRectPath(ctx, startX, py, photoW, photoH, 24);
+                        ctx.clip();
+                        drawCoverFitImage(ctx, capturedPhotos[i], startX, py, photoW, photoH, 24);
+                        ctx.restore();
+                    } else {
+                        roundedRectPath(ctx, startX, py, photoW, photoH, 24);
+                        ctx.fillStyle = '#110920';
+                        ctx.fill();
+                        ctx.fillStyle = '#666';
+                        ctx.font = '400 32px Plus Jakarta Sans';
+                        ctx.fillText(`FRAME #${i + 1}`, canvas.width / 2, py + photoH / 2);
+                    }
+
+                    roundedRectPath(ctx, startX, py, photoW, photoH, 24);
+                    ctx.strokeStyle = style.accent;
+                    ctx.lineWidth = 6;
+                    ctx.stroke();
+
+                    ctx.fillStyle = style.accent;
+                    roundedRectPath(ctx, startX + 20, py + 20, 74, 46, 12);
+                    ctx.fill();
+                    ctx.fillStyle = style.bg;
+                    ctx.font = '800 26px Orbitron';
+                    ctx.fillText(`0${i + 1}`, startX + 57, py + 51);
+
+                    if (i < 2) drawPerforation(ctx, startX + 40, py + photoH + 55, photoW - 80, style.border);
+                }
+
+                const footerY = 2860;
+
+                ctx.fillStyle = style.headerText;
+                ctx.font = '800 44px Orbitron';
+                ctx.fillText('STELLAR MEMORY ARCHIVE #19', canvas.width / 2, footerY + 60);
+
+                ctx.fillStyle = '#e2e8f0';
+                ctx.font = '600 32px Rajdhani';
+                ctx.fillText('MALANG, INDONESIA • 08 SEPTEMBER 2026', canvas.width / 2, footerY + 120);
+
+                ctx.fillStyle = style.accent;
+                ctx.font = '700 28px Orbitron';
+                ctx.fillText('✨ 100% COSMIC VIBES • 🐧 PENGUIN CLUB ✨', canvas.width / 2, footerY + 180);
+
+                const barcodeY = footerY + 230;
+                const barcodeX = canvas.width / 2 - 260;
+                ctx.fillStyle = style.headerText;
+                for (let b = 0; b < 52; b++) {
+                    let bw = (b % 3 === 0) ? 8 : ((b % 5 === 0) ? 6 : 3);
+                    ctx.fillRect(barcodeX + (b * 10), barcodeY, bw, 65);
+                }
+
+                ctx.fillStyle = style.accent;
+                ctx.font = '600 20px Orbitron';
+                ctx.fillText('OFFICIAL BIRTHDAY PROTOCOL v19.0', canvas.width / 2, barcodeY + 105);
+
+                let settled = false;
+                const finish = () => {
+                    if (settled) return;
+                    settled = true;
                     finalizeResult(canvas);
                 };
-                overlayImg.src = CUSTOM_FRAME_URL;
-            } else {
+
+                const frameImg = new Image();
+                frameImg.crossOrigin = 'anonymous';
+                frameImg.onload = () => {
+                    if (settled) return;
+                    const imgDataBackup = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    try {
+                        ctx.drawImage(frameImg, 0, 0, canvas.width, canvas.height);
+                        canvas.toDataURL('image/png');
+                    } catch (e) {
+                        console.warn("Gambar overlay mengunci canvas. Merender ulang tanpa gambar eksternal.", e);
+                        ctx.putImageData(imgDataBackup, 0, 0);
+                    }
+                    finish();
+                };
+                frameImg.onerror = finish;
+                frameImg.src = 'Yellow Vintage Trend Photostrip Bookmark.png';
+                setTimeout(finish, 500);
+            } catch (err) {
+                console.error('Render photostrip gagal:', err);
+                const canvas = document.getElementById('photostripCanvas');
                 finalizeResult(canvas);
             }
         }
 
         function finalizeResult(canvas) {
-            const dataUrl = canvas.toDataURL('image/png');
-            const finalImg = document.getElementById('finalPhotostripImg');
-            const placeholder = document.getElementById('placeholderResultText');
-            const btnDownload = document.getElementById('btnDownloadStrip');
+            try {
+                const dataUrl = canvas.toDataURL('image/png');
+                const finalImg = document.getElementById('finalPhotostripImg');
+                const modalImg = document.getElementById('modalStripImg');
+                const placeholderText = document.getElementById('placeholderResultText');
+                const zoomHint = document.getElementById('zoomHintOverlay');
+                const btnDownload = document.getElementById('btnDownloadStrip');
 
-            finalImg.src = dataUrl;
-            finalImg.classList.remove('hidden');
-            placeholder.classList.add('hidden');
-            
-            btnDownload.href = dataUrl;
-            btnDownload.classList.remove('hidden');
+                if (finalImg) {
+                    finalImg.src = dataUrl;
+                    finalImg.classList.remove('hidden');
+                }
+                if (modalImg) {
+                    modalImg.src = dataUrl;
+                }
+                if (zoomHint) {
+                    zoomHint.classList.remove('hidden');
+                }
+                if (placeholderText) {
+                    placeholderText.classList.add('hidden');
+                }
+                if (btnDownload) {
+                    btnDownload.href = dataUrl;
+                    btnDownload.classList.remove('hidden');
+                }
 
-            if (typeof confetti === "function") {
-                confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
+                openStripModal();
+                confetti({ particleCount: window.innerWidth < 768 ? 120 : 220, spread: 90, origin: { y: 0.6 } });
+            } catch (err) {
+                console.error("Gagal memproses hasil gambar:", err);
             }
+        }
+
+        function openStripModal() {
+            const finalImg = document.getElementById('finalPhotostripImg');
+            if(finalImg && finalImg.src && !finalImg.classList.contains('hidden')) {
+                document.getElementById('stripModal').classList.add('active');
+            }
+        }
+
+        function closeStripModal() {
+            document.getElementById('stripModal').classList.remove('active');
         }
     </script>
 </body>
